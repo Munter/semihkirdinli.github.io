@@ -1,0 +1,54 @@
+---
+layout: post
+title: "WCF Öğreniyorum - 1"
+date: 2016-02-17 00:42
+author: semihkirdinli
+comments: true
+categories: [WCF]
+tags: [.net, dağıtık, mimari, WCF, wcf service, web service]
+---
+Uzun yazılar yazmıyordum okuması sıkıcı olur diye. Ancak baktım ve gördüm ki, bir bütün halinde olan uzun yazılar da sıkılmadan okunabiliyor. Bu yazı dizisinde WCF(Windows Communication Foundation) teknolojisinden bahsedeceğim. WCF teknolojisini projelerimin hemen hemen hepsinde kullanmaktayım, bu yüzden daha ayrıntılı ele almak istiyorum. Yazının birinci bölümünde amacım WCF’e kısa bir giriş yapmak.
+
+“Globalleşen dünyada...” diye başlamak isterdim cümleye ancak “Gerçek hayatta...” diye başlamak daha doğru olur. Evet;
+
+Uzun seneler önce yazılımcılar kod yazardı, kodu yazdığı makinede de bu kodu kullanırdı. Kod yazmaya devam ettiler ve istediler ki bu kodları, programları başkaları da kullanabilsin. Sunucular ortaya çıktı ve sunucuya kurulum yapıldı, sunucular üzerinden programlar, ortak kullanılmaya başlandı. Şimdi ise birbiriyle entegre çalışan sistemler yaygın olarak kullanılıyor ve herkes birbirine web service veriyor, web service çağırıyor, vs. Kısacası bir sunucu da yetmiyor artık. Sunucular gerekiyor. Web service günümüz yazılımcılarının projelerinde çok sık kullandığı uygulamalar haline geldi. Veri transferi anlamında çok önemli işler, bu sayede yapılabiliyor. Örneğin bir veri transfer edileceği zaman şifrelenmiş şekilde gönderilebiliyor ve web service’i çağıran tarafın da, bu şifreyi çözerek istenilen bilgiye erişmesi sağlanabiliyor.
+
+**<u>WCF Nedir?</u>**
+
+Wikipedia tanımına göre: Servis-yönelimli mimariyi temel alarak dağıtık uygulamalar geliştirmek için kullanılan, dağıtık mimari modelleri ve teknolojileri tek çatı altında birleştiren ve içerisinde bir çok hazır bileşen barındıran bir Framework API‘sidir.
+
+<span style="text-decoration:underline;">**Dağıtık Sistem Nedir?**</span>
+
+Dağıtık sistem, birden fazla bilgisayar ve/veya sunucunun birbirleri arasında iletişim kurması ve birbirleri ile replika şekilde bir ağ bütünü olarak çalışmasına denir.
+
+Microsoft’un şimdiye kadarki dağıtık mimari uygulamaları:
+
+
+*   Asp.Net Web Services (ASMX)
+*   Web Services Enhancements (WSE)
+*   Messaging (MSMQ)
+*   .NET Enterprise Services (ES)
+*   .NET Remoting
+Tüm bu uygulamalar ayrı ayrı host ediliyor, her bir dağıtık sistem için farklı işlemler yapmak gerekiyordu. WCF, bu dağıtık mimarileri biraraya getirerek standartlarını belirledi. Güvenli bir SOA mimarisinin oluşmasını sağladı.
+
+**<u>WCF Temelleri</u>**
+
+.NET Framework 3.0 ile hayatımıza giren WCF, servis ve istemciler arasındaki mesajları göndermek için oluşturulmuştur. Bu mesajlar, TCP, HTTP, MSMQ, Web Servisleri vb. gibi ortak taşıma protokolleri kullanarak Intranet ve Internet üzerinden gönderilebilir. Ayrıca mesajlar güvenli bir şekilde gönderilmekte ve dijital bütünlüğü için imzalanabilmektedir. WCF mesajlaşma işlemi için, request/response şeklinde basit mesaj desenlerinin yanı sıra iki kanal üzerinden iletişim gibi daha karmaşık desenleri de desteklemektedir.
+
+WCF’in diğer bir özelliği ise Microsoft olmayan diğer ortamlarda da servis ve istemcilerle haberleşebilir.
+
+**<u>WCF’in ABC’si</u>**
+
+WCF’in A’sı “Address”, B’si “Binding”, C’si ise “Contract”’ı ifade eder. Bunları da açıklayalım. Bunlar nedir peki, kısaca açıklayalım hemen:
+
+Bir web service en az bir tane endpointe sahiptir. Endpoint’ler, servisin iletişimini sağlayan ve kuralları belirleyen yapılardır. Sunucu tarafında n tane olabilir, ancak istemci tarafta 1 tanedir. Bu da n tane farklı iletişim yolu anlamına gelmektedir.
+
+**Address: **Servisin nerede olduğunu belirtir.
+
+**Binding: **Servis ile iletişimde kullanılacak aktarım protokolünü (Http,Tcp vb.), kodlama (encoding text, binary vb. ve güvenlik gereksinimlerini (SSL, SOAP vb.) belirtir ve servise dış dünyanın hangi kurallar ile bağlanabileceğini ifade eder.
+
+**Contract: **Servis ile yapılabilecek işlemleri ifade eder.
+
+Yazı dizisinin ilk bölümünde söyleyeceklerim bu kadar. Tekrar görüşmek üzere.
+
+&nbsp;
