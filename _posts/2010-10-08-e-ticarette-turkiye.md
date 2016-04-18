@@ -9,7 +9,7 @@ tags: [e-ticaret, etkinlilk, saü, Ufuk Aksak]
 ---
 
 
-![](/images/jekyll/142.jpg?w=300 "14")
+![](http://semihkirdinli.files.wordpress.com/2011/10/142.jpg?w=300 "14")
 
 
 

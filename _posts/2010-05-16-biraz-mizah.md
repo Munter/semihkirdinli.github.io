@@ -7,4 +7,4 @@ comments: true
 categories: [Genel]
 tags: [apple, microsoft, microsoft strore]
 ---
-![](/images/jekyll/15.jpg "15")
+<a href="http://semihkirdinli.files.wordpress.com/2011/10/15.jpg">![](http://semihkirdinli.files.wordpress.com/2011/10/15.jpg "15")</a>

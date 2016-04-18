@@ -7,7 +7,7 @@ comments: true
 categories: [Ceturk Etkinlikleri]
 tags: [ceturk, etkinlik, Facebook Uygulama, microsoft, Oyun Programlamaya Giriş]
 ---
-<a href="/images/jekyll/1.jpg">![](/images/jekyll/1.jpg "1")</a>
+<a href="http://semihkirdinli.files.wordpress.com/2011/10/1.jpg">![](http://semihkirdinli.files.wordpress.com/2011/10/1.jpg "1")</a>
 
 Bugüne kadar çok farklı konu ve teknolojiler ilgili yaptığı ücretsiz etkinliklerle bilişim sektörünün gelişmesine katkıda bulunan CETURK yine büyük bir organizasyon ile karşınızda.
 
