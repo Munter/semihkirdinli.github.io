@@ -7,7 +7,7 @@ comments: true
 categories: [Seminer &amp; Etkinlik]
 tags: [akademik bilişim, akademik bilişim 2012, Akademik Bilişim Kongresi, akgül, mustafa akgül, odtü, stant, uşak, Uşak Üniversitesi]
 ---
-<a href="http://semihkirdinli.files.wordpress.com/2012/02/banner.png">![akademik bilişim](http://semihkirdinli.files.wordpress.com/2012/02/banner.png "banner")</a>
+<a href="/images/jekyll/banner.png">![akademik bilişim](/images/jekyll/banner.png "banner")</a>
 Merhabalar, öncesinde bloğumda haberini duyuramadığım Akademik Bilişim'in ardından aktarmak istediklerim var. Nedeni ise Akademik Bilişim'in bu kadar büyük ve güzel bir organizasyon olduğunu bilmememdi. Türkiye'de ilki ODTÜ'de olmak üzere, 14.'sü düzenlenen Akademik Bilişim Kongresi bu yıl Uşak Üniversitesi'ndeydi. Uşak, 700-1000 arası katılımcıya ev sahipliği yaptı.
 
 Bu organizasyonun adının içinde ne kadar **"akademik"** kelimesi geçse de, özel sektörden bir sürü firma yer aldı. Bunun yanında Türkiye'nin çeşitli üniversitelerinden bir sürü öğrenci arkadaşımız geldi. Hepsinin ayağına sağlık geldikleri için. Kötü hava şartları nedeniyle gelemeyenler de oldu.

@@ -1,20 +1,20 @@
 #
 # Blog Settings
 #
-author: Phil Haack
-description: You've been Haacked and you like it
-url: https://semihkirdinli.wordpress.com/
-title: You've Been Haacked
-subtitle: ...and you like it
-gravatar_url: https://2.gravatar.com/avatar/cdf546b601bf29a7eb4ca777544d11cd
+author: Semih Kırdinli
+description: Bir Bilgisever Mühendis ...ve onun düşünceleri
+url: https://semihkirdinli.wordpress.com
+title: Bir Bilgisever Mühendis
+subtitle: ...ve onun düşünceleri
+gravatar_url: https://tr.gravatar.com/userimage/4966509/ad4620408efa538c105cd45c70a2a131.jpg?size=200
 subscribe_rss: https://semihkirdinli.wordpress.com/feed/
 
 # Github repositories
-github_user: haacked
-github_repo_url: https://github.com/Haacked/haacked.com/
+github_user: semihkirdinli
+github_repo_url: https://github.com/semihkirdinli/semihkirdinli.github.io/
 
 # Twitter
-twitter_user: haacked
+twitter_user: skirdinli
 twitter_tweet_button: true
 
 # Disqus Comments
