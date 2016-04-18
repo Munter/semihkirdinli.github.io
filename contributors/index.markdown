@@ -1,19 +1,21 @@
 ---
 layout: page
-title: "Katkıda Bulunanlar"
+title: "Contributors"
 date: 2014-05-10 -0800
 comments: false
 categories: [personal blog]
 sharing: false
 ---
 
-## Katkıda Bulunanlar
+## Contributors
 
-Blog sitemi geliştirebilir, gördüğünüz problemleri çözmeme katkıda bulunabilirsiniz. Böyle bir isteğiniz olursa bana bir "pull request" göndermeniz yeterli!
+These lovely people have contributed a fix to my blog. If you want
+to see yourself in this list, send me a pull request!
 
-Bloğumda düzenleme yapmak istediğiniz her yazı için, başlığın altında gördüğünüz "edit" linkine tıklamanız sayesinde, tarafıma otomatik olarak "pull request" yollanır.
+Every post in my blog has an edit link that lets you edit the blog post directly in the browser and automatically sends me a pull request.
 
-Veya [bloğumu ziyaret et]({{site.github.repository_url}}) üzerinden eski sistem bir "pull request" gönderebilirsiniz..
+Or [visit my repository]({{site.github.repository_url}}) and send me a pull
+request the old fashioned way.
 
 <ul>
 {% for contributor in site.github.contributors %}

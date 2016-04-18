@@ -9,8 +9,9 @@ tags: [alter, char, kullanici, kullaniciAdi, newcolumnname, query, sorgu, sql, s
 ---
 Sql Server veritabanında önceki kayıtları bozmadan tabloya sadece yeni bir kolon eklemek istersek yazacağımız sql sorgusu şöyle olmalıdır:
 
-```sql
-ALTER TABLE TableName ADD NewColumnName char(30);
 
-ör: ALTER TABLE Kullanici ADD KullaniciAdi char(30);
-```
+
+<span style="color:#0000ff;">ALTER TABLE</span> TableName <span style="color:#0000ff;">ADD</span> NewColumnName <span style="color:#0000ff;">char</span>(30);
+    
+    <span style="color:#ff0000;">ör:</span> <span style="color:#0000ff;">ALTER TABLE</span> Kullanici <span style="color:#0000ff;">ADD</span> KullaniciAdi <span style="color:#0000ff;">char</span>(30);
+

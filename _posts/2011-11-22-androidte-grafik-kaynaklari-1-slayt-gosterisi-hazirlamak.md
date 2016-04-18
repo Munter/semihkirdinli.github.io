@@ -28,13 +28,13 @@ Grafik işlemleri için ***android.graphics.drawable ***paketinin alt sınıflar
 
 Uygulamamıza Eclipse IDE’sinden File à New à Other dedikten sonra Android klasöründen **Android Project**’i seçerek başlıyoruz. Ardından açılan wizard’ta Project name kısmından proje adını veriyoruz. Build Target bölümünden Android versiyonunu seçiyoruz(Burası önemli, Android versiyonunu burada ne seçtiysek aşağıdaki Min SDK Version bölümüne buradaki versiyon sürüm numarasının tam 2 katını yazıyoruz). Projemizde 1.5 seçmiştik. Bu yüzden aşağıda Min SDK Version bölümünün değerine 3 yazdık. Application name kısmında uygulamaya isim verdik. Package name kısmı da önemli(Burada vereceğimiz isim ise araya nokta koymak şartıyla en az 2 kelimeden oluşmalıdır). Projemizde Package name kısmına isim olarak com.graphicapp verdik. Bir de Java aktivite sınıfına isim veriyoruz ve Finish diyerek bitiriyoruz.
 
-![open-image](/images/jekyll/1.open_.png)
+<a href="http://www.ceturk.com/images/1.open_.png">![open-image](http://www.ceturk.com/images/1.open_.png)</a>
 
 İlk uygulamamız bitmap resimler kullanarak çerçeve tabanlı animasyon yapmak. Bunun için önce resimleri res/drawable dosyasının altına kopyalayacağız. Ardından aynı klasör içine bir de XML dosyası koyacağız. Bu da resimleri referans eden dosya olacak. Kaynak olarak bu dosyayı verdiğimizde bir animasyon elde etmiş olacağız.
 
-![newxmlfile](/images/jekyll/2-newxmlfile.png)
+<a href="http://www.ceturk.com/images/2.newXMLFile.png">![](http://www.ceturk.com/images/2.newXMLFile.png)</a>
 
-![xmlname](/images/jekyll/3-xmlname.png)
+<a href="http://www.ceturk.com/images/3.XMLName.png">![](http://www.ceturk.com/images/3.XMLName.png)</a>
 
 Resimleri res/drawable klasörünün altına şekildeki gibi attık. Daha sonra drawable klasörüne sağ tıklayarak New à Other à File dedik ve gelen wizard’ta Next butonuna bastıktan sonra XML dosyamızın adını **logo_animation.xml** olarak verdik ve işlemi tamamladık. XML dosyasının içine yazacağımız kodlar :
 
@@ -49,7 +49,7 @@ Resimleri res/drawable klasörünün altına şekildeki gibi attık. Daha sonra 
     &lt;item android:drawable="@drawable/resim5" android:duration="2000" /&gt;
     &lt;item android:drawable="@drawable/resim6" android:duration="2000" /&gt;
     **&lt;/animation-list&gt; **</pre>
-![](/images/jekyll/4-xml_icerik.png)
+    <a href="http://www.ceturk.com/images/4.XML_icerik.png">![](http://www.ceturk.com/images/4.XML_icerik.png)</a>
     
     Şimdi sırada animasyonu oynatmak var. Bizim yapacağımız örnekte resimlerin boyutları hep aynı kalmakta, sadece içerisindeki resim değişmektedir. Bu şekilde yapılan animasyonlar transform-based(biçim değiştirme tabanlı) deniyor. Bunun için main.xml ‘e bir ImageView kontrolü ekliyoruz.
     
@@ -67,7 +67,7 @@ Resimleri res/drawable klasörünün altına şekildeki gibi attık. Daha sonra 
     android:id="@+id/imageView"/&gt;
     
     &lt;/LinearLayout&gt;</pre>
-![](/images/jekyll/5-imageview_id.png)
+    <a href="http://www.ceturk.com/images/5.ImageView_id.png"> ![](http://www.ceturk.com/images/5.ImageView_id.png)</a>
     <pre class="brush: java">import android.view.MotionEvent;
     import android.widget.ImageView;
     import android.graphics.drawable.AnimationDrawable;
@@ -92,7 +92,7 @@ Resimleri res/drawable klasörünün altına şekildeki gibi attık. Daha sonra 
                 return super.onTouchEvent(event);
         }
     }</pre>
-![](/images/jekyll/6-java_aktivite.png)
+    <a href="http://www.ceturk.com/images/6.Java_aktivite.png">![](http://www.ceturk.com/images/6.Java_aktivite.png)</a>
     
     Bu kodlarla önce animasyonun hareket yeteneği kazanabilmesi için AnimationDrawable sınıfından bir nesne türettik. Önceden oluşturmuş olduğumuz ImageView kontrolüne Id’si ile ulaştık. Daha sonra ekrana dokunduğunda bu animasyonu oynat dedik.
     
@@ -104,10 +104,11 @@ Resimleri res/drawable klasörünün altına şekildeki gibi attık. Daha sonra 
     android:layout_height=*"wrap_content"*
     android:text=*"Ekranın herhangi bir yerine dokunduğunuzda slayt gösterisi başlayacaktır."*/&gt;
 
-![](/images/jekyll/7-uyaritext.png)
+<a href="http://www.ceturk.com/images/7.uyariText.png"> ![](http://www.ceturk.com/images/7.uyariText.png)</a>
 
-Uygulamanın ekran çıktısı:
+**Uygulamanın ekran çıktısı :
+**
 
-![](/images/jekyll/8-ekranciktisi.png)
+<a href="http://www.ceturk.com/images/8.ekranCiktisi.png">![](http://www.ceturk.com/images/8.ekranCiktisi.png)</a>
 
 Uygulamanın kaynak kodunu indirmek için [tıklayınız](http://www.ceturk.com/dosyalar/ornekler/android-GraphicApp-slide-show.rar)

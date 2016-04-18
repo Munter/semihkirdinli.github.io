@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Hakkımda"
+title: "About Haacked"
 date: 2005-10-15 -0800
 comments: false
 disqus_identifier: 10811
@@ -9,32 +9,53 @@ categories: [personal]
 sharing: false
 ---
 
-## Ben kimim
+## Who I am
 
-2009 yılında başladığım blog maceramda, zaman zaman paylaşımlarda bulundum. Şimdilerde ise blog sitemi yeni bir yapıya kavuşturarak paylaşımlarıma devam etmek istiyorum.
+[![Me and Cody](http://farm2.static.flickr.com/1166/720440046_7bec55b6f0_m.jpg)](http://www.flickr.com/photos/haacked/720440046/ "Photo Sharing")In
+case you were wondering, not that I have any reason to believe you were,
+*Haacked* is *not* my real name.
 
-Ben bir .net developer'ım. Burada da .net, veritabanı, mobil yazılım gibi konularda yazılar paylaşacağım. Yeri geldikçe de hayatımdan kesitler de aktarmaya, biraz içimi dökmeye çalışacağım. Kafanızı şişireceğim anlayacağınız. :)
+In the offline world, *(which some prefer to call the “real world”)*,
+people tend to call me [Phil Haack](http://haacked.com/ "home page")
+*(pronounced, you guessed it, “hack”)* — unless of course they are
+calling me more colorful names as is sometimes deserved.
 
-Hatalarımız, kusurlarımız olabilir. Yaptığım yapacağım hatalar için beni uyarırsanız sevinirim. Kalanlar için de mazur görün. :)
+*Haacked* is simply my [blogger
+handle](http://haacked.com/archive/2005/03/12/what-is-your-blogger-handle.aspx "What’s your blogger handle?")
+*(creative, eh?)*. I also go by [@haacked](http://twitter.com/haacked)
+on Twitter
 
-Beni "semihkirdinli" keyword'üyle twitter, linkedin gibi çeşitli platformlardan bulabilirsiniz.
+## What I do
 
-## Ne yapıyorum
+I work at [GitHub](http://github.com/) doing whatever I can to
+make it even more awesome.
 
-İstanbul'da, bir Hollanda bankası olan ING Bank'ta çalışıyorum.
+## Why I do it
 
-## Niçin yapıyorum
+Ever since I first laid my hands on [my first
+computer](http://haacked.com/archive/2005/06/06/my-first-computer.aspx "This was my first computer"),
+a TRS-80, *aka Trash 80*, I’ve loved computers and all the wonderful
+things you can make them do such as printing `Care to play a game?` in
+an infinite loop.
 
-Kısaca özetlemek gerekirse sevdiğim için.
+While I love my day job, I also have a passion for managing and
+developing Open Source projects. There’s something immensely satisfying
+in working with developers all over the world on a common goal, and then
+sharing that product with all comers.
 
-İlk işe girdiğimdeki heyecanım hala devam ettiği için. Öyle ki; ilk çalışmaya başladığımda şaşırmıştım.
+## What I do for fun
 
-Hem kod yazıyorum hem de para veriyorlar. :) Bu düşünce umarım her şeyi anlatıyordur.
+![Sand Sharks](/images/SandSharks.jpg)What is it about American culture
+that causes us to ask people *What do you do?* and mean *What is your
+occupation?* rather than *What do you do for fun?*. And here I go
+propagating that mindset by putting this section last.
 
-## Eğlenmek için ne yaparım
+Oh well. Read my blog for a while and you’ll find I’m fanatical about
+playing soccer.
 
-Çeşitli siteleri, yeni teknolojiyi takip ederim.
+Living in beautiful Bellevue, WA, I take every occasion to go hiking and
+camping. I’ve also been to [Burning Man](http://haacked.com/archive/2004/07/18/burningmanphotopedia.aspx/ "Burningman Photos")
+three times, and would love to make it a habit if I could.
 
-Basketbol oynarım(uzun süredir oynayamasam da...)
-
-Umarım size yararı dokunan içerik bulabilirsiniz.
+The picture above is from my first time at Burning Man, paddling away
+from sand sharks.

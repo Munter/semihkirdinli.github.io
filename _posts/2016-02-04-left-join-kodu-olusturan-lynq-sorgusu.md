@@ -10,21 +10,24 @@ tags: [c#, entity framework, entityframework, left join, lynq]
 
 
 Entity Framework ile Left Join, sık kullanılan ihtiya&ccedil;lardan birisi. Sade bir left join kodu generate eden bir lynq sorgusu &ouml;rneği:
-{% highlight c# %}
-using (DataConnection conn = new DataConnection())
-{
-	var query = (from o in conn.OrderDbSet
-        join p in conn.ProductDbSet
-        on o.ProductId equals p.ProductId into gj
-        from g in gj.DefaultIfEmpty()
-        select new OrderDetail()
-        {
-            Count = o.Count,
-            DeliveryPlace = o.DeliveryPlace,
-            ProductName = g.ProductName
-		});
+
+
+
+using (DataConnection conn = new DataConnection())  
+{  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var query = (from o in conn.OrderDbSet  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;join p in conn.ProductDbSet  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;on o.ProductId equals p.ProductId into gj  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from g in gj.DefaultIfEmpty()  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;select new OrderDetail()  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Count = o.Count,  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DeliveryPlace = o.DeliveryPlace,  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ProductName = g.ProductName  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});  
 }
-{% endhighlight %}
+
+
 
 Kaynak: https://msdn.microsoft.com/en-us/library/bb397895.aspx
 
