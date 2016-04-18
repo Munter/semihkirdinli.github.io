@@ -7,7 +7,7 @@ comments: true
 categories: [.NET Framework, ASP.NET]
 tags: [.net framework, asp.net, chart, chart area, chart kontrolü, chartarea, data mining, DataRow, dataset, DataTable, Series, visual studio 2010]
 ---
-![](/images/jekyll/30.png "30")
+![](http://semihkirdinli.files.wordpress.com/2011/11/30.png "30")
 
 Bu makalemde sizlere ASP.NET ile *Toolbox’*ın Data alanına gelen, raporları veya bir yerde tuttuğumuz verileri grafiksel gösterim metoduyla önümüze sunan Chart kontrolünden bahsedeceğim. Ardından örnek bir uygulama paylaşacağım. Chart kontrolü Visual Studio’da önceden *toolbox* alanında olmayan bir kontroldü. Bu yüzden User Control haline getirilmiş örnekleri projeye dahil etme yöntemiyle kullanım şekli vardı. *.NET Framework 4.0*’da ise bu kontrol bize *Toolbox’*ta verilmiş olup, bir çok özelliği içinde barındırmaktadır. Bir örnek üzerinden giderek konunun daha iyi anlaşılacağını düşünüyorum.
 
@@ -15,7 +15,7 @@ Chart aracının önemli bir özelliği DataSource’unu verebilmemiz. Örneğim
 
 **File --&gt; New --&gt; Web Site --&gt; ASP.NET Empty Web Site** diyerek başlıyoruz. Ardından sitemize hemen bir **Default.aspx** sayfası ekleyelim. Toolbox’ın **Data** bölümünden Chart kontrolünü sayfamıza sürükleyelim.
 
-![](/images/jekyll/30-2.png "30.2")
+![](http://semihkirdinli.files.wordpress.com/2011/11/30-2.png "30.2")
 
 Burada Series bölümü tanımlayacağımız nitelik sayısını belirler. Örneğin günlük kayıt sayısını tutmak için bir series, tıklanma sayısını tutmak için bir series tanımlayabiliriz.  ChartAreas bölümünde ise grafiğimize özellikler verebiliriz. Buna örnek olarak ise 3D görünüm, grafiği döndürme, aralıkları belirleme gibi özellikleri mevcuttur. Series,ChartAreas gibi etiketleri arasına Legends tanımlayarak burada da grafikteki renklerin neyi ifade ettiğini kolaylıkla ekranda gösterebiliriz. Ayrıca bu Chart kontrolünün grafiğini istediğimiz gibi ayarlayabileceğimiz seçenkler mevcut. etiketinin içinde **ChartType="Line" **gibi seçenekler mevcut. Bunu dizayn bölümünden gelerek de yapabilriz.
 
@@ -93,12 +93,12 @@ protected void Page_Load(object sender, EventArgs e)
 
 Projeyi debug ettiğimizde alacağımız görüntü şekildeki gibidir.
 
-<a href="/images/jekyll/30-1.png">![](/images/jekyll/30-1.png "30.1")</a>
+<a href="http://semihkirdinli.files.wordpress.com/2011/11/30-1.png">![](http://semihkirdinli.files.wordpress.com/2011/11/30-1.png "30.1")</a>
 
 **Bu makalede ne yaptık ?**
 
 
-1.  Chart kontrolünü .aspx sayfamıza sürükledik.
+1.  Chart kontrolünü **.aspx **sayfamıza sürükledik.
 2.  DataTable ve DataRow’ları elle girdirdik.
 3.  Chart1 nesnesinin Series’lerinde **XvalueMember** ve **YvalueMembers** özelliklerini **Gun** ve **Sayi** olarak verdik. Çünkü isteğimiz günlük tıklanma sayısına bakmak. Burada önemli olan **YvalueMembers** değerleri karşılaştırma yapmak içindir. Bu değerlere göre karşılaştırma yaparak istatistiği grafik olarak önümüze sunmaktadır. **XvalueMember** ise yatay eksende göstereceğimiz isimlerden ibarettir. Karşılaştırma için kullanılmaz.
 4.  Yukarudaki bilgileri içeren datatable döndüren fonksiyonu(GunlereGoreGirisDagilimi adında) yazdık.

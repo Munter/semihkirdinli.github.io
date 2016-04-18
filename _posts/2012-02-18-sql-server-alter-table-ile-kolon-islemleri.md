@@ -9,6 +9,7 @@ tags: [alter, alter column, alter table, column, sql, sql server]
 ---
 Tablodaki varolan alanları düzenlemek için kullanacağımız ALTER TABLE komutu aşağıdaki gibi:
 
-```sql
-ALTER TABLE tablo_adi ALTER COLUMN alan_adi alan_turu;
-```
+
+
+<span style="color:#0000ff;">ALTER TABLE</span> tablo_adi <span style="color:#0000ff;">ALTER COLUMN </span>alan_adi alan_turu;
+
