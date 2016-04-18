@@ -9,7 +9,7 @@ tags: [c++, Duygu Arbatlı Yağcı, kitap, nesne yönelimli programlama, robert 
 ---
 [Nesne Yönelimli C++ Programlama Kılavuzu, Robert Lafore,Duygu Arbatlı Yağcı](http://www.kitapyurdu.com/kitap/default.asp?id=66653&amp;y=10021)
 
-<a href="http://semihkirdinli.files.wordpress.com/2011/10/4.jpg">![](http://semihkirdinli.files.wordpress.com/2011/10/4.jpg "4")</a>
+<a href="/images/jekyll/4.jpg">![](/images/jekyll/4.jpg "4")</a>
 
 Robert Lafore
 ALFA YAYINLARI
@@ -25,4 +25,4 @@ ALFA YAYINLARI
 ·Yüzlerce soru ve örnek alıştırma
 ·Program mimarisini Unified Modeling Language (UML) ile görselleştirin.
 ·CASE modelleme kullanarak sınıf keşfi ile nesne yönelimli tasarım ve analiz
-·Sık karşılaşılan programlama problemlerine mükemmel bir çözüm: Standart Template LibraryS
+·Sık karşılaşılan programlama problemlerine mükemmel bir çözüm: Standart Template Library

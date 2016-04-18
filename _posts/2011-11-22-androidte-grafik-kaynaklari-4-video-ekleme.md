@@ -17,30 +17,20 @@ Bildiklerimizi bir proje üzerinde görelim. Önce bir VideoView nesnesi ekleyel
 
 Her zamanki gibi Eclipse IDE’sinden File–&gt;New–&gt;Other dedikten sonra **Android Project**’i seçiyoruz.
 
-<a href="http://www.ceturk.com/images/video1.png">![android slayt](http://www.ceturk.com/images/video1-1000x364.png "video1")</a>
+![android slayt](/images/jekyll/video1.png "video1")
 
 Main.xml’e gelerek bir VideoView nesnesi ekliyoruz. Bu işlemi ister Graphic Layout kısmından **Views** bölümü altındaki VideoView kontrolünü sürükleyerek, istersek de kod tarafından şu kodları yazarak ekleyebiliriz.
 
 
-&lt;VideoView
+<VideoView android:id="@+id/videoView1" android:layout_width="fill_parent" android:layout_height="fill_parent"></VideoView>
+![video view](/images/jekyll/videoview2.png "videoview2")
     
-    android:id=*"@+id/videoView1"*
-    
-    android:layout_width=*"fill_parent"*
-    
-    android:layout_height=*"fill_parent"*&gt;
-    
-    &lt;/VideoView&gt;</pre>
-    <a href="http://www.ceturk.com/images/videoview21.png">![video view](http://www.ceturk.com/images/videoview21-1000x540.png "videoview2")</a>
-    
-    Ardından Activity sayfasına geçiyoruz. Sunucudan video’yu almak için bir yol tanımlamamız gerekiyor. Bu yüzden Uri paketini import edeceğiz. Resim gösterebilmek için ImageView içinde resmin kaynağını verdiğimiz gibi video oynatabilmek için de bir VideoView widget’ı tanımlıyoruz. Yapacağımız uygulamada, video’nun yolunu Activity sınıfında yazacağımız java kodlarıyla vereceğiz. Son olarak video’yu oynatabilmek için gerekli olan MediaController paketini import ediyoruz.
+Ardından Activity sayfasına geçiyoruz. Sunucudan video’yu almak için bir yol tanımlamamız gerekiyor. Bu yüzden Uri paketini import edeceğiz. Resim gösterebilmek için ImageView içinde resmin kaynağını verdiğimiz gibi video oynatabilmek için de bir VideoView widget’ı tanımlıyoruz. Yapacağımız uygulamada, video’nun yolunu Activity sınıfında yazacağımız java kodlarıyla vereceğiz. Son olarak video’yu oynatabilmek için gerekli olan MediaController paketini import ediyoruz.
     
     Sonuç olarak import edilecek paketler aşağıdaki gibi olacak.
     <pre class="brush: java">
     android.net.Uri
-    
     android.widget.VideoView
-    
     android.widget.MediaController
     </pre>
     Artık java kodlarını yazmaya başlayabiliriz. Öncelikle sunucudaki video’nun yolunu veya adresini tutabilmek için Uri referans tipinde bir nesne oluşturacağız. Uri(Uniform Resource Identifier)’nin kullandığı protokollerden birisi de HTTP Server. Bu yüzden video’nun yolunu internet üzerinden verebiliriz. Uri tipinden referans alacak bir nesne tanımı yaparak, internet üzerinden verdiğimiz yolu Uri tipine parse ederek bu nesneye atıyoruz.
@@ -69,13 +59,13 @@ Main.xml’e gelerek bir VideoView nesnesi ekliyoruz. Bu işlemi ister Graphic L
     vv.start();
     
 
-<a href="http://www.ceturk.com/images/videoactivity3.png">![video activity](http://www.ceturk.com/images/videoactivity3-1000x562.png "videoactivity3")</a>
+![video activity](/images/jekyll/videoactivity3.png "videoactivity3")
 
 **Not:** Bu işlemleri yaparken internetin bağlı olması gerektiğini unutmayınız.
 
 Uygulamayı çalıştırıyoruz ve ekran çıktısı:
 
-<a href="http://www.ceturk.com/images/ekranCiktisi4.png">![ekran çıktısı](http://www.ceturk.com/images/ekranCiktisi4.png "ekranCiktisi4")</a>
+![ekran çıktısı](/images/jekyll/ekranCiktisi4.png "ekranCiktisi4")
 
 
 
