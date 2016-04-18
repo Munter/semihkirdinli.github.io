@@ -7,7 +7,7 @@ comments: true
 categories: [Ceturk Etkinlikleri]
 tags: [ceturk, e-dergi, salt okunur, saltokunur, Şubat]
 ---
-![](http://semihkirdinli.files.wordpress.com/2011/10/101.jpg?w=150 "10")
+![](/images/jekyll/101.jpg?w=150 "10")
 
 Merhaba arkadaşlar,
 

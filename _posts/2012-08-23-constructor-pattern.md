@@ -11,36 +11,41 @@ Merhabalar, yeni bir aktif blog dönemine girmiş bulunmaktayım. Bu yazıda Tas
 
 **Basit bir constructor örneği:**
 
-
+{% highlight javascript %}
 function Car(model, year, miles) {
-        this.model = model;
-        this.year = year;
-        this.miles = miles;
-        this.toString = function () {
-            return this.model + " has done " + this.miles + " miles";
-        };
-    }
-    
-    var civic = new Car("Honda Civic", 2009, 20000);
-    var mondeo = new Car("Ford Mondeo", 2010, 5000);
-    
-    console.log(civic.toString());
-    console.log(mondeo.toString());</pre>
-    **Prototype kullanılarak yapılan bir constructor örneği:**
-    <pre class="brush: java">function Car(model, year, miles) {
-        this.model = model;
-        this.year = year;
-        this.miles = miles;
-    }
-    
-    Car.prototype.toString = function () {
-        return this.model + " has done " + this.miles + " miles";
+    this.model = model;
+    this.year = year;
+    this.miles = miles;
+    this.toString = function () {
+       return this.model + " has done " + this.miles + " miles";
     };
+}
+
+var civic = new Car("Honda Civic", 2009, 20000);
+var mondeo = new Car("Ford Mondeo", 2010, 5000);
     
-    var civic = new Car("Honda Civic", 2009, 20000);
-    var mondeo = new Car("Ford Mondeo", 2010, 5000);
+console.log(civic.toString());
+console.log(mondeo.toString());
+{% endhighlight %}
+
+**Prototype kullanılarak yapılan bir constructor örneği:**
+
+{% highlight javascript %}
+function Car(model, year, miles) {
+    this.model = model;
+    this.year = year;
+    this.miles = miles;
+}
     
-    console.log(civic.toString());
+Car.prototype.toString = function () {
+    return this.model + " has done " + this.miles + " miles";
+};
+    
+var civic = new Car("Honda Civic", 2009, 20000);
+var mondeo = new Car("Ford Mondeo", 2010, 5000);
+    
+console.log(civic.toString());
+{% endhighlight %}
 
 Burada ister normal yöntemde olduğu gibi **this** diyerek, istersek de **Car.prototype** diyerek Car nesnesini çağırabiliriz. **this.toString** metodu Car nesnesinin içerisinden çıkarılmış, ancak **Car.prototype.toString** ile tanımlandığında yine Car'a ait bir metot olarak çağrılabilmiştir. Prototype, adından da anlaşılacağı gibi, büyük bir nesnenin küçük bir parçası olarak düşünülebilir.
 

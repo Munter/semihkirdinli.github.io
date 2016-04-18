@@ -19,84 +19,84 @@ Connection string’lerin doğruluğunu test edelim. Örnekte, Solution’da 2 
 
 Uygulamanın class library’sinde bulunan class’lar:
 
+{% highlight c# %}
+public abstract class Database
+    {
+        public abstract string GetConnectionString();
+    }
 
-    public abstract class Database
+    public class SqlServer : Database
+    {
+        public override string GetConnectionString()
         {
-            public abstract string GetConnectionString();
+            return @"Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=SSPI;User ID=myDomain\myUsername;Password=myPassword;";
         }
-    
-        public class SqlServer : Database
-        {
-            public override string GetConnectionString()
-            {
-                return @"Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=SSPI;User ID=myDomain\myUsername;Password=myPassword;";
-            }
-        }
-    
-        public class PostgreSql : Database
-        {
-            public override string GetConnectionString()
-            {
-                return @"Server=127.0.0.1;Port=5432;Database=myDataBase;User Id=myUsername;Password=myPassword;CommandTimeout=20;";
-            }
-        }
-    
-        public class Oracle : Database
-        {
-            public override string GetConnectionString()
-            {
-                return @"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;";
-            }
-        }</pre>
-    
-    Bu class’ları normal projemizin class’ları olarak düşünebiliriz.
-    
-    Test projesinde Test edilecek class’ların başına [TestClass], metotların başına [TestMethod] ve her testten önce çalışmasını istediğimiz metodun başına [TestInitialize] yazılması gerekir. 
-    Uyuglamanın ileride büyüyüp 3 database’den fazlasını destekleyebileceği durumunu düşünürsek, bu durumda testleri türeteceğimiz bir base class(DatabaseTestBase) olmalı.
-    
-    <pre>
-        public class DatabaseTestBase
-        {
-            protected Database _database;
-            protected string _expectedConnectionString = string.Empty;
-    
-            [TestMethod]
-            public void GetConnectionStringAssertValue()
-            {
-                string expectedValue = _expectedConnectionString;
-                string currentValue = _database.GetConnectionString();
-    
-                Assert.AreEqual(expectedValue, currentValue);
-            }
-        }
-    </pre>
-    
-    Bu class database’den bağımsız bir şekilde connection string’i test edebilmektedir. Ancak bu class’ı kullanabilmek için türetmemiz gerekir. Bu yüzden SqlServer’a ve Oracle’a  beklentimiz olan connection string değerini set ediyoruz ve ardından yeni bir örneğini türetiyoruz. Yeni bir database geldiğinde yine aynı şekilde beklediğimiz connection string değerini set etmek ve yeni bir örneğini türetmek copy-paste, quick replace hızımıza kalmış. :)
-    
-    <pre>
-        [TestClass]
-        public class SqlServerDatabaseTest: DatabaseTestBase
-        {
-            [TestInitialize]
-            public void Setup()
-            {
-                _expectedConnectionString = @"Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=SSPI;User ID=myDomain\myUsername;Password=myPassword;";
-                _database = new SqlServer();
-            }
-        }
-    
-        [TestClass]
-        public class OracleDatabaseTest: DatabaseTestBase
-        {
-            [TestInitialize]
-            public void Setup()
-            {
-                _expectedConnectionString = @"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;";
-                _database = new Oracle();
-            }
-        }
-    
+    }
 
+    public class PostgreSql : Database
+    {
+        public override string GetConnectionString()
+        {
+            return @"Server=127.0.0.1;Port=5432;Database=myDataBase;User Id=myUsername;Password=myPassword;CommandTimeout=20;";
+        }
+    }
+
+    public class Oracle : Database
+    {
+        public override string GetConnectionString()
+        {
+            return @"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;";
+        }
+    }
+{% endhighlight %}
+
+Bu class’ları normal projemizin class’ları olarak düşünebiliriz.
+
+Test projesinde Test edilecek class’ların başına [TestClass], metotların başına [TestMethod] ve her testten önce çalışmasını istediğimiz metodun başına [TestInitialize] yazılması gerekir. 
+Uyuglamanın ileride büyüyüp 3 database’den fazlasını destekleyebileceği durumunu düşünürsek, bu durumda testleri türeteceğimiz bir base class(DatabaseTestBase) olmalı.
+
+{% highlight c# %}
+public class DatabaseTestBase
+{
+    protected Database _database;
+    protected string _expectedConnectionString = string.Empty;
+
+    [TestMethod]
+    public void GetConnectionStringAssertValue()
+    {
+        string expectedValue = _expectedConnectionString;
+        string currentValue = _database.GetConnectionString();
+
+        Assert.AreEqual(expectedValue, currentValue);
+    }
+}
+{% endhighlight %}
+    
+Bu class database’den bağımsız bir şekilde connection string’i test edebilmektedir. Ancak bu class’ı kullanabilmek için türetmemiz gerekir. Bu yüzden SqlServer’a ve Oracle’a  beklentimiz olan connection string değerini set ediyoruz ve ardından yeni bir örneğini türetiyoruz. Yeni bir database geldiğinde yine aynı şekilde beklediğimiz connection string değerini set etmek ve yeni bir örneğini türetmek copy-paste, quick replace hızımıza kalmış. :)
+
+{% highlight c# %}
+[TestClass]
+public class SqlServerDatabaseTest: DatabaseTestBase
+{
+    [TestInitialize]
+    public void Setup()
+    {
+        _expectedConnectionString = @"Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=SSPI;User ID=myDomain\myUsername;Password=myPassword;";
+        _database = new SqlServer();
+    }
+}
+
+[TestClass]
+public class OracleDatabaseTest: DatabaseTestBase
+{
+    [TestInitialize]
+    public void Setup()
+    {
+        _expectedConnectionString = @"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;";
+        _database = new Oracle();
+    }
+}
+{% endhighlight %}
 
 Bir dahaki yazıda görüşmek üzere. Hoşçakalın.
 
