@@ -1,1 +1,1 @@
-# semihkirdinli.github.io
+Welcome to my jekyll blog github page!
