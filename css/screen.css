@@ -506,7 +506,7 @@ ul li a { -webkit-transition: all .2s ease-in;-moz-transition:all .2s ease-in;-o
 .container .mid-col #banner { width: 100% }
 .container .mid-col #banner small { margin-right: 70px }
 .container .mid-col footer.inner { text-align: center;margin:0px 70px 0px 40px;width:auto }
-.container .mid-col .mid-col-container { padding: 0px 70px 0px 100px;max-width:700px }
+.container .mid-col .mid-col-container { padding: 0px 70px 0px 100px;max-width:800px }
 #content { width: 100% }
 #content article { border-top: none;padding:80px 0px }
 #content article .title { margin-left: 0px;font-size:4em;font-weight:800;line-height:1em }
