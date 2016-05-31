@@ -1,24 +1,1618 @@
----
-layout: default
----
+<!DOCTYPE HTML>
 
-{% assign index = true %}
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Semih Kırdinli ⓒⓔ</title>
+	<meta name="author" content="Semih Kırdinli">
+
+	
+	<meta name="description" content="
+		Semih Kırdinli © ...ve düşünceleri
+	">
+	
+
+	<!-- http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://semihkirdinli.wordpress.com/feed/" rel="alternate" title="Semih Kırdinli ⓒⓔ" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://semihkirdinli.github.io/">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- <link href="/favicon.ico" rel="shortcut icon"> -->
+	<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/css/code.css" type="text/css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="/js/slash.js" async></script>
+
+  	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-177588-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+				<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="https://tr.gravatar.com/userimage/4966509/ad4620408efa538c105cd45c70a2a131.jpg?size=200?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Semih Kırdinli ⓒⓔ</a></h1>
+  
+    <h2>...ve düşünceleri</h2>
+  
+</hgroup>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/about/">hakkımda</a></li>
+  <li><a href="/archive">arşiv</a></li>
+  <li><a href="https://github.com/semihkirdinli/semihkirdinli.github.io/issues/new">iletişim</a></li>
+  <li><a href="/contributors">katkıda bulunanlar</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    Semih Kırdinli © ...ve düşünceleri
+  </p>
+</section>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+			<a class="twitter" href="http://twitter.com/skirdinli" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/semihkirdinli" title="GitHub">GitHub</a>
+		
+		
+			<a class="rss" href="https://semihkirdinli.wordpress.com/feed/" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>
+		<div class="mid-col">
+			<div class="mid-col-container">
+				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
-{% for post in paginator.posts %}
-{% unless post.redirect %}
-{% assign content = post.content %}
+
+
+
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        {% include article.html %}
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2016/02/17/wcf-ogreniyorum-1/" itemprop="url">WCF Öğreniyorum - 1</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2016-02-17T00:42:00+02:00"  itemprop="datePublished">February 17, 2016</time></span>
+	<span class="tags">WCF</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2016/02/17/wcf-ogreniyorum-1/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2016-02-17-wcf-ogreniyorum-1.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Uzun yazılar yazmıyordum okuması sıkıcı olur diye. Ancak baktım ve gördüm ki, bir bütün halinde olan uzun yazılar da sıkılmadan okunabiliyor. Bu yazı dizisinde WCF(Windows Communication Foundation) teknolojisinden bahsedeceğim. WCF teknolojisini projelerimin hemen hemen hepsinde kullanmaktayım, bu yüzden daha ayrıntılı ele almak istiyorum. Yazının birinci bölümünde amacım WCF’e kısa bir giriş yapmak.</p>
+
+<p>“Globalleşen dünyada…” diye başlamak isterdim cümleye ancak “Gerçek hayatta…” diye başlamak daha doğru olur. Evet;</p>
+
+<p>Uzun seneler önce yazılımcılar kod yazardı, kodu yazdığı makinede de bu kodu kullanırdı. Kod yazmaya devam ettiler ve istediler ki bu kodları, programları başkaları da kullanabilsin. Sunucular ortaya çıktı ve sunucuya kurulum yapıldı, sunucular üzerinden programlar, ortak kullanılmaya başlandı. Şimdi ise birbiriyle entegre çalışan sistemler yaygın olarak kullanılıyor ve herkes birbirine web service veriyor, web service çağırıyor, vs. Kısacası bir sunucu da yetmiyor artık. Sunucular gerekiyor. Web service günümüz yazılımcılarının projelerinde çok sık kullandığı uygulamalar haline geldi. Veri transferi anlamında çok önemli işler, bu sayede yapılabiliyor. Örneğin bir veri transfer edileceği zaman şifrelenmiş şekilde gönderilebiliyor ve web service’i çağıran tarafın da, bu şifreyi çözerek istenilen bilgiye erişmesi sağlanabiliyor.</p>
+
+<h2 id="wcf-nedir">WCF Nedir?</h2>
+
+<p>Wikipedia tanımına göre: Servis-yönelimli mimariyi temel alarak dağıtık uygulamalar geliştirmek için kullanılan, dağıtık mimari modelleri ve teknolojileri tek çatı altında birleştiren ve içerisinde bir çok hazır bileşen barındıran bir Framework API‘sidir.</p>
+
+<h2 id="datk-sistemnedir">Dağıtık Sistem Nedir?</h2>
+
+<p>Dağıtık sistem, birden fazla bilgisayar ve/veya sunucunun birbirleri arasında iletişim kurması ve birbirleri ile replika şekilde bir ağ bütünü olarak çalışmasına denir.</p>
+
+<p>Microsoft’un şimdiye kadarki dağıtık mimari uygulamaları:</p>
+
+<ul>
+  <li>Asp.Net Web Services (ASMX)</li>
+  <li>Web Services Enhancements (WSE)</li>
+  <li>Messaging (MSMQ)</li>
+  <li>.NET Enterprise Services (ES)</li>
+  <li>.NET Remoting</li>
+</ul>
+
+<p>Tüm bu uygulamalar ayrı ayrı host ediliyor, her bir dağıtık sistem için farklı işlemler yapmak gerekiyordu. WCF, bu dağıtık mimarileri biraraya getirerek standartlarını belirledi. Güvenli bir SOA mimarisinin oluşmasını sağladı.</p>
+
+<h2 id="wcf-temelleri">WCF Temelleri</h2>
+
+<p>.NET Framework 3.0 ile hayatımıza giren WCF, servis ve istemciler arasındaki mesajları göndermek için oluşturulmuştur. Bu mesajlar, TCP, HTTP, MSMQ, Web Servisleri vb. gibi ortak taşıma protokolleri kullanarak Intranet ve Internet üzerinden gönderilebilir. Ayrıca mesajlar güvenli bir şekilde gönderilmekte ve dijital bütünlüğü için imzalanabilmektedir. WCF mesajlaşma işlemi için, request/response şeklinde basit mesaj desenlerinin yanı sıra iki kanal üzerinden iletişim gibi daha karmaşık desenleri de desteklemektedir.</p>
+
+<p>WCF’in diğer bir özelliği ise Microsoft olmayan diğer ortamlarda da servis ve istemcilerle haberleşebilir.</p>
+
+<h2 id="wcfin-abcsi">WCF’in ABC’si</h2>
+
+<p>WCF’in A’sı “Address”, B’si “Binding”, C’si ise “Contract”’ı ifade eder. Bunları da açıklayalım. Bunlar nedir peki, kısaca açıklayalım hemen:</p>
+
+<p>Bir web service en az bir tane endpointe sahiptir. Endpoint’ler, servisin iletişimini sağlayan ve kuralları belirleyen yapılardır. Sunucu tarafında n tane olabilir, ancak istemci tarafta 1 tanedir. Bu da n tane farklı iletişim yolu anlamına gelmektedir.</p>
+
+<p><strong>Address:</strong> Servisin nerede olduğunu belirtir.</p>
+
+<p><strong>Binding:</strong> Servis ile iletişimde kullanılacak aktarım protokolünü (Http,Tcp vb.), kodlama (encoding text, binary vb. ve güvenlik gereksinimlerini (SSL, SOAP vb.) belirtir ve servise dış dünyanın hangi kurallar ile bağlanabileceğini ifade eder.</p>
+
+<p><strong>Contract:</strong> Servis ile yapılabilecek işlemleri ifade eder.</p>
+
+<p>Yazı dizisinin ilk bölümünde söyleyeceklerim bu kadar. Tekrar görüşmek üzere.</p>
+
+		
+		
+	</div>
+
+
     </article>
-{% endunless %}
-{% endfor %}
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2016/02/04/left-join-kodu-olusturan-lynq-sorgusu/" itemprop="url">Left Join Kodu Oluşturan Lynq Sorgusu</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2016-02-04T20:47:00+02:00"  itemprop="datePublished">February  4, 2016</time></span>
+	<span class="tags">.NET Framework, C#</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2016/02/04/left-join-kodu-olusturan-lynq-sorgusu/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2016-02-04-left-join-kodu-olusturan-lynq-sorgusu.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Entity Framework ile Left Join, sık kullanılan ihtiyaçlardan birisi. Sade bir left join kodu generate eden bir lynq sorgusu örneği:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="p">(</span><span class="n">DataConnection</span> <span class="n">conn</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DataConnection</span><span class="p">())</span>
+<span class="p">{</span>
+	<span class="n">var</span> <span class="n">query</span> <span class="p">=</span> <span class="p">(</span><span class="n">from</span> <span class="n">o</span> <span class="k">in</span> <span class="n">conn</span><span class="p">.</span><span class="n">OrderDbSet</span>
+        <span class="n">join</span> <span class="n">p</span> <span class="k">in</span> <span class="n">conn</span><span class="p">.</span><span class="n">ProductDbSet</span>
+        <span class="n">on</span> <span class="n">o</span><span class="p">.</span><span class="n">ProductId</span> <span class="n">equals</span> <span class="n">p</span><span class="p">.</span><span class="n">ProductId</span> <span class="n">into</span> <span class="n">gj</span>
+        <span class="n">from</span> <span class="n">g</span> <span class="k">in</span> <span class="n">gj</span><span class="p">.</span><span class="nf">DefaultIfEmpty</span><span class="p">()</span>
+        <span class="n">select</span> <span class="k">new</span> <span class="nf">OrderDetail</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Count</span> <span class="p">=</span> <span class="n">o</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span>
+            <span class="n">DeliveryPlace</span> <span class="p">=</span> <span class="n">o</span><span class="p">.</span><span class="n">DeliveryPlace</span><span class="p">,</span>
+            <span class="n">ProductName</span> <span class="p">=</span> <span class="n">g</span><span class="p">.</span><span class="n">ProductName</span>
+		<span class="p">});</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Kaynak: https://msdn.microsoft.com/en-us/library/bb397895.aspx</p>
+
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2015/06/07/user-control-icinde-event-delegate-etmek-ve-yakalamak/" itemprop="url">User Control İçinde Event Delegate Etmek ve Yakalamak</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2015-06-07T11:42:00+03:00"  itemprop="datePublished">June  7, 2015</time></span>
+	<span class="tags">C#</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2015/06/07/user-control-icinde-event-delegate-etmek-ve-yakalamak/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2015-06-07-user-control-icinde-event-delegate-etmek-ve-yakalamak.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>WPF üzerinden .net EventHandler yapısına ufak bir örnek vermeye çalıştım.</p>
+
+<p><strong>UI:</strong></p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="p">&lt;</span><span class="n">UserControl</span> <span class="n">Name</span><span class="p">=</span><span class="s">"ucTextBox"</span> <span class="n">Loaded</span><span class="p">=</span><span class="s">"ucTextBox_Loaded"</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="n">TextBox</span> <span class="n">Name</span><span class="p">=</span><span class="s">"txtInput"</span> <span class="n">TextWrapping</span><span class="p">=</span><span class="s">"Wrap"</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="n">UserControl</span><span class="p">&gt;</span></code></pre></figure>
+
+<p><strong>Backend:</strong></p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">Example</span> <span class="p">:</span> <span class="n">Window</span>
+<span class="p">{</span>
+     <span class="k">public</span> <span class="nf">Example</span><span class="p">()</span>
+     <span class="p">{</span>
+          <span class="nf">InitializeComponent</span><span class="p">();</span>
+          <span class="n">txtInput</span><span class="p">.</span><span class="n">TextChanged</span> <span class="p">+=</span> <span class="k">new</span>                                     <span class="nf">TextChangedEventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">Audit_TextChanged</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="c1">/// Constructor'da delegate edilen txtInput TextChanged        event'ini bu fonksiyon yakalar.
+</span>     <span class="k">private</span> <span class="k">void</span> <span class="nf">Audit_TextChanged</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span>                  <span class="n">TextChangedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"Sadece TextBox kontrolü içinde                 delegate edilmiştir."</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="c1">/// User Control constructor'da delegate edilir.
+</span>     <span class="k">private</span> <span class="k">void</span> <span class="nf">ucTextBox_Loaded</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span>                    <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="nf">AddHandler</span><span class="p">(</span><span class="n">TextBox</span><span class="p">.</span><span class="n">TextChangedEvent</span><span class="p">,</span> <span class="k">new</span>                       <span class="nf">RoutedEventHandler</span><span class="p">(</span><span class="n">Audit_TextChanged</span><span class="p">),</span> <span class="k">true</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="c1">/// User Control içinde delegate edilen eventi bu              fonksiyon yakalar.
+</span>     <span class="k">private</span> <span class="k">void</span> <span class="nf">Audit_TextChanged</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span>                  <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"User Control içinde delegate                   edilmiştir."</span><span class="p">);</span>
+     <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2015/06/07/e-handled-nedir/" itemprop="url">&quot;e.Handled&quot; nedir?</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2015-06-07T08:49:00+03:00"  itemprop="datePublished">June  7, 2015</time></span>
+	<span class="tags">C#</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2015/06/07/e-handled-nedir/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2015-06-07-e-handled-nedir.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Masaüstü uygulamaları geliştiriyorsak ve kontrollere event yazmışsak dikkat etmemiz gereken şeylerden biri de event fonksiyonuna ait parametrelerdir.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">void</span> <span class="nf">StackPanel_PreviewTextInput</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">TextCompositionEventArgs</span> <span class="n">e</span><span class="p">)</span></code></pre></figure>
+
+<p>Buradaki TextCompositionEventArgs class’ı sonuç olarak EventArgs class’larından türetilmiş bir sub class’tır. Dolayısıyla base class’larının metot ve değişkenlerini içermektedir. Bu değişkenlerden biri de Handled’tır.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="kt">bool</span> <span class="n">Handled</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span> <span class="n">olarak</span> <span class="n">tan</span><span class="err">ı</span><span class="n">mlan</span><span class="err">ı</span><span class="n">r</span><span class="p">.</span></code></pre></figure>
+
+<p>Handled değişkeni bir olayın gerçekleşip gerçekleşmediğine ait atamayı gösterir. Metodumuzun içinde, “e.Handled = true;” diyerek içinden çıkarsak, yani fonksiyonu return edersek, olay gerçekleşmiş gibi kabul edilir ve tekrar yapılmaz. Örnekle açıklamak gerekirse: klavyeden tuşlara basıyorum, event fonksiyonunun içine “e.Handled = true;” yazarsam olayım gerçekleşmeyecektir. Bu fonksiyonun içine ihtiyacımıza göre farklı kontroller koyarak bazı kısıtlamalar getirebiliriz. Örneğin kullanıcıya Türkçe karakter girdirmek istemiyorsak veya sadece rakam girdirmek istiyorsak, bu şekilde kontrolümüzü geliştirebiliriz.</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2015/04/07/for-mu-foreach-mi-daha-hizli/" itemprop="url">&quot;for&quot; &quot;foreach&quot; Performans?</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2015-04-07T08:28:00+03:00"  itemprop="datePublished">April  7, 2015</time></span>
+	<span class="tags">C#, Genel</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2015/04/07/for-mu-foreach-mi-daha-hizli/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2015-04-07-for-mu-foreach-mi-daha-hizli.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Yazmış olduğum küçük bir kod parçacığıyla bir döngü içinde dönerek “for”un mu yoksa “foreach”in mi daha performanslı çalıştığını göstermeye çalıştım. Kod her çalıştığında farklı sonuçlar ürettiği için ekran çıktısını bu yazıya dahil etmedim. Kodu çalıştırdığımızda, for döngüsü foreach’e göre daha hızlı sonuçlar verdi.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">static</span> <span class="kt">long</span><span class="p">[]</span> <span class="n">longArray</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">long</span><span class="p">[</span><span class="m">99999999</span><span class="p">];</span>
+<span class="k">static</span> <span class="kt">long</span> <span class="n">total</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="n">var</span> <span class="n">watch</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Stopwatch</span><span class="p">();</span>
+     <span class="n">watch</span><span class="p">.</span><span class="nf">Start</span><span class="p">();</span>
+     <span class="nf">CallForEach</span><span class="p">();</span>
+     <span class="n">watch</span><span class="p">.</span><span class="nf">Stop</span><span class="p">();</span>
+     <span class="n">var</span> <span class="n">elapsedMs1</span> <span class="p">=</span> <span class="n">watch</span><span class="p">.</span><span class="n">ElapsedMilliseconds</span><span class="p">;</span>
+     <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Foreach Elapsed Ms: "</span> <span class="p">+</span> <span class="n">elapsedMs1</span><span class="p">);</span>
+     <span class="n">watch</span><span class="p">.</span><span class="nf">Restart</span><span class="p">();</span>
+     <span class="nf">CallFor</span><span class="p">();</span>
+     <span class="n">watch</span><span class="p">.</span><span class="nf">Stop</span><span class="p">();</span>
+     <span class="n">var</span> <span class="n">elapsedMs2</span> <span class="p">=</span> <span class="n">watch</span><span class="p">.</span><span class="n">ElapsedMilliseconds</span><span class="p">;</span>
+     <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"For Elapsed Ms: "</span> <span class="p">+</span> <span class="n">elapsedMs2</span><span class="p">);</span>
+     <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">CallFor</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">longArray</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+     <span class="p">{</span>
+          <span class="n">total</span> <span class="p">+=</span> <span class="n">longArray</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">CallForEach</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="k">foreach</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="k">in</span> <span class="n">longArray</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="n">total</span> <span class="p">+=</span> <span class="n">i</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2015/04/02/ref-parameter-kullanimi/" itemprop="url">&quot;ref&quot; ve &quot;out&quot; Parametre Kullanımı</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2015-04-02T07:38:00+03:00"  itemprop="datePublished">April  2, 2015</time></span>
+	<span class="tags">C#</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2015/04/02/ref-parameter-kullanimi/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2015-04-02-ref-parameter-kullanimi.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p><strong>ref</strong> parametresi, bir metoda parametre geçişinde kullanılırsa nesnenin bellekteki adresi üzerinde değişiklik yapar. int, bool gibi tiplerde durum böyle değildir, nesnenin bir kopyası alınarak işlem yapılır, orijinal nesne üzerinde işlem yapılmaz. Kendi yazdığım çok basit bir örnekle açıklamak gerekirse:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">static</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="err">　　</span><span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="err">　　</span><span class="nf">tempFunction</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"without ref parameter: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="nf">tempFunction</span><span class="p">(</span><span class="k">ref</span> <span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"with ref parameter: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="n">Console</span><span class="p">.</span><span class="nf">Read</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">tempFunction</span><span class="p">(</span><span class="k">ref</span> <span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">++;</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">tempFunction</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">++;</span> <span class="p">}</span></code></pre></figure>
+
+<p><strong>out</strong> parametresi de ref parametresinin aynısıdır, tek farkı: parametre fonksiyonun içine girdikten sonra bir değer ataması yapılması gerekir. Onun dışında bir farkı yoktur. Yani şu şekilde olacak:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">static</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="err">　　</span><span class="n">a</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+<span class="err">　　</span><span class="nf">tempFunction</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"without out parameter: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="nf">tempFunction</span><span class="p">(</span><span class="k">out</span> <span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"with out parameter: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="err">　　</span><span class="n">Console</span><span class="p">.</span><span class="nf">Read</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">tempFunction</span><span class="p">(</span><span class="k">out</span> <span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span> <span class="n">a</span><span class="p">++;</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">tempFunction</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="p">++;</span> <span class="p">}</span></code></pre></figure>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2014/03/19/agile-proje-yonetimi-scrum/" itemprop="url">Agile Proje Yönetimi & Scrum</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2014-03-19T23:56:00+02:00"  itemprop="datePublished">March 19, 2014</time></span>
+	<span class="tags">Genel, Scrum</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2014/03/19/agile-proje-yonetimi-scrum/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2014-03-19-agile-proje-yonetimi-scrum.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Yazılım proje yönetiminde bilinen ve yaygın olarak kullanılan 2 yöntem vardır. Birincisi waterfall dediğimiz proje yönetimi. Waterfall’da istekler önceden bellidir. Projenin tamamı için belli bir süre ayrılmıştır. O sürenin sonunda proje müşteriye teslim edilir. Bu yöntem artık yavaş yavaş geçerliliğini kaybetmektedir. Çünkü müşterinin istediğini yapmak, sizi diğerlerinden 1 adım öne geçirir ve satış yapabilme imkanınızı artırır.</p>
+
+<p>Bilinen diğer yöntem ise çevik(agile) proje yönetimidir. Bu yöntem son yıllarda yaygın olarak kullanılmaktadır. Çevik(agile) proje yönetimi bir yaklaşımdır. Proje yönetimi ve kişisel gelişim konusunda yarar sağlayabilecek yönleri çoktur. Çevik proje yönetimi detaylarına fazla girmeyeceğim. İnternette bununla ilgili çok sayıda kaynak bulabilirsiniz.</p>
+
+<p>Çevik proje yönetimi dediğimiz şey değişikliklere çabuk uyum sağlayarak, müşteriyi de işin içine kattığımız bir proje geliştirme yöntemidir.</p>
+
+<p>Başlıca çevik metotlar nedir ?</p>
+
+<ul>
+  <li>Scrum</li>
+  <li>Extreme Programming</li>
+  <li>Adaptive Software Development</li>
+  <li>Crystal Clear</li>
+  <li>Feature Driven Development</li>
+  <li>Lean Software Development</li>
+</ul>
+
+<p>Bu yazının devamında, Scrum’la ilgili edindiğim bilgileri kendimce yorumlayıp çıkardığım sonuçları paylaşmak istiyorum. Diğer yöntemlerden bahsetmeyeceğim.</p>
+
+<p>Scrum, tekrarlı ve artan, yazılım projeleri ürün yönetimi veya uygulama geliştirme yönetimi için ortaya çıkan bir framework’tür. Scrum, proje boyunca görmek istemediğimiz eksik yanları, gidişattaki bozuklukları, yanlış yaptığımız yerleri su yüzüne çıkarır. Eksik olan yönlerimizi öğrenmemize yardımcı olur.</p>
+
+<p>Bir projede Scrum’ın uygulanabilmesi için 3 role ihtiyaç vardır:</p>
+
+<ul>
+  <li>Product owner</li>
+  <li>Development team</li>
+  <li>Scrum master</li>
+</ul>
+
+<p>Bu rollerden az veya fazla rol olmaz. Scrum takımları en az 3, en fazla 9 kişiden oluşur. İdeali 5-6’dır.</p>
+
+<p><strong>Product owner:</strong> Ürünün veya projenin değerinin artırılmasından sorumlu kişidir. Ne geliştirileceğini ve hangi öncelikte geliştirileceğini belirlemekten sorumludur.</p>
+
+<p><strong>Development team:</strong> Geleneksel yazılım geliştirme yöntemlerini bilen, yazılım mimarı, programcı, testçi, veritabanı uzmanı, arayüz programcısı gibi kişilerden oluşan bir takımdır. Takımdaki elemanları, yetkinliklerine göre seçmek gerekir. Development team, self-organizing(kendini yönetebilen) bir yapıda olmalıdır.</p>
+
+<p><strong>Scrum master:</strong> Scrum değerleri, prensipleri ve uygulanışı ile ilgili konularda insanlara yardımcı olur. Scrum team ve tüm organizasyon, scrum master’ın performansıyla gelişir. Scrum master, development team bir sorun yaşadığında bu sorunu çözüme kavuşturacak kişidir. Ya kendisi çözer ya da başka bir çözüm yolu bulur. Scrum master, development team’deki kişilerin ne yapacağını söylemez. Görevleri dağıtmaz. Otorite olarak üstünlüğü yoktur. Ancak sorumuluğu fazladır. Scrum master’ı development team seçer, istediğinde de görevden alır. Scrum master’ın development team’i koruyan bir yapısı olmalıdır. Kişilik olarak da egolarından sıyrılmış biri olmalıdır.</p>
+
+<p><strong>Sprint:</strong> Sprint, geliştirmenin bir fazıdır. Projeye başlarken bir sprint süresi belirlenmeli ve bu süre proje bitimine kadar değişmemelidir. En fazla 1 ay süre verilebilir. Ancak ideali 1-2 haftadır. Projeye göre değişir. Sprint süresinin değişmemesi belli bir tempoda çalışmayı sağlar. Her sprint planlama toplantısıyla başlar, görevler belirlenir, sprint hedefinin gerçekleşmesi adına commitment’lar(bir işi yapmak için taahhüt edilen süre) tahmin edilir. Sprint review ve retrospective toplantısıyla bitirilir. İşlem bu şekilde devam eder, bir sonraki sprintte neler yapılacağı belirlenir. Sprint sonunda ise tüm görevlerin “done”, yani bitmiş olması gerekir. “done” ın tanımı ise önceden belirlenmelidir.</p>
+
+<h2 id="toplantlar"><strong>Toplantılar:</strong></h2>
+<p><strong>Sprint Planlama Toplantısı 1:</strong> Product owner, kendi yazılım takımına ürün içeriğinde(Product Backlog) kararlaştırılan kullanıcı hikayelerini (User Stories) öncelik sırasına göre belirtir ve gereksinimler takım tarafından netleştirilip yazılı olarak kaydedilir. Kısaca, sprint sonunda “done” olacak görevler kararlaştırılır. Amaç kullanılabilir yazılım elde etmektir. Test edilmiş, entegre olmuş ve kullanıcıya açılmış olmalıdır. Bu toplantının süresi 60 dakikadır.</p>
+
+<p><strong>Sprint Planlama Toplantısı 2:</strong> Sprint-plan 1’de “NE” sorusu ön planda iken, sprint-plan 2’de “NASIL” sorusu ön plana çıkar. Toplantı takımın sorumluluğunda düzenlenir. Görevler belirlenen kullanıcı hikayelerinden hareketle duvara asılır. Bu sayede hangisinin işlemde ya da sırada olduğu açık bir şekilde görülebilir. Bu toplantının süresi de 60 dakikadır. Sprint-plan 1 ve 2 aynı günde yapılmalıdır.</p>
+
+<p><strong>Daily Scrum:</strong> Sprint’in her günü, proje takımı toplantısı yapılır. Çabuk bitmesi için ayakta yapılan bu toplantıya daily scrum denir. Scrum takımındaki tüm elemanlar bu toplantıya katılmak zorundadır. Her gün aynı saatte başlar. Development team’de bulunan herkes bu toplantıya güncellemelerle(dün bunu yaptım, bugün şunu yapacağım) gelmelidir. Bu toplantı en fazla 15 dakika sürebilmektedir. Bu toplantıda her bir scrum team elemanı şu sorulara cevap verir:</p>
+
+<ul>
+  <li>What have you done since yesterday?</li>
+  <li>What are you planning to do today?</li>
+  <li>Any impediments/stumbling blocks?</li>
+</ul>
+
+<p>Bu toplantıda detaya fazla girilmez. Yüzeysel konuşulur. Eğer detay gerektiren bir şey olursa toplantıdan sonra ayrıca konuşulabilir.</p>
+
+<p><strong>Sprint Review Meeting:</strong> Tamamlanan görevlerin üstünden geçilir, kullanıcıya bir demo gibi gösterilir. Kullanıcı hikayelerinde bir eksiklik varsa Scrum master not alır, ürün sahibi tarafından ürün içeriğine aktarılır. Süre olarak 1 ayda biten Sprint’in revizyonu en fazla 4 saat sürebilir.</p>
+
+<p><strong>Sprint Retrospective:</strong> Tüm takım elemanları sprintte neler yaptığını dile getirir. Bu toplantıda her bir takım elemanına 2 ana soru sorulur.</p>
+
+<ul>
+  <li>What went well during the sprint?</li>
+  <li>What could be improved in the next sprint?</li>
+</ul>
+
+<p>Bu toplantıyı Scrum master düzenler. 1 aylık Sprint için en fazla 3 saat sürebilir.</p>
+
+<h2 id="yap-talar"><strong>Yapı Taşları</strong></h2>
+<p><strong>Product Backlog:</strong> Taleplerin oluşturulması ve yönetilmesi için merkezi belgedir. Toparlanan kullanıcı hikayeleri ürün sahibi tarafından önceliklerine göre düzenlenir ve gerçekleştirme zamanı development team yardımıyla tahmin edilir. Product backlog’a eklenen talepler teknik olarak değil, mesleki ve kullanıcı odaklı olmalıdır. İyi bir kullanıcı 3 soruya cevap vermelidir.</p>
+
+<p>Kullanıcı olarak (kim?) bu işlevi (neyi?) şu faydalar (neden?) için istiyorum.</p>
+
+<p><strong>Sprint İçeriği:</strong> Sprint içeriği için 4 sütunlu bir görev tahtasına ihtiyaç vardır. 1. sütunda kullanıcı hikayeleri, 2. sütunda görevler(<strong>TODO</strong>), 3. sütunda çalışma(<strong>INPROGRESS</strong>), 4.sütunda teslime hazır (<strong>DONE</strong>) olan hikayeler yer alır. Bir günde bitmeyen görevler ise kırmızıyla işaretlenir.</p>
+
+<p>Daha çok ayrıntısı olsa da temel olarak uygulanış şekli bu şekildedir. Bunun yanında, Scrum’dan biraz uygulayayım diye bir şey yoktur. Ya uygularsınız, ya uygulamazsınız. Biraz ondan biraz bundan olduğunda Scrum’dan tam verim alamazsınız.</p>
+
+<p>Umarım faydalı bir yazı olmuştur. Okuduğunuz için teşekkürler.</p>
+
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2013/07/19/windows-azure-multiapp/" itemprop="url">Windows Azure Multiapp</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2013-07-19T14:01:00+03:00"  itemprop="datePublished">July 19, 2013</time></span>
+	<span class="tags">Genel, Windows Azure</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2013/07/19/windows-azure-multiapp/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2013-07-19-windows-azure-multiapp.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p><a href="http://azuremultiapp.codeplex.com/wikipage?title=Deploy">http://azuremultiapp.codeplex.com/wikipage?title=Deploy</a></p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2013/05/29/jquery-ajax-call/" itemprop="url">Jquery ajax call</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2013-05-29T21:36:00+03:00"  itemprop="datePublished">May 29, 2013</time></span>
+	<span class="tags">jquery</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2013/05/29/jquery-ajax-call/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2013-05-29-jquery-ajax-call.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>jQuery has an ajax method</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<span class="err">　　　　</span><span class="na">type</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+<span class="err">　　　　</span><span class="na">url</span><span class="p">:</span> <span class="s2">"some.php"</span><span class="p">,</span>
+<span class="err">　　　　</span><span class="na">data</span><span class="p">:</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span> <span class="na">location</span><span class="p">:</span> <span class="s2">"Boston"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">msg</span> <span class="p">)</span> <span class="p">{</span>
+<span class="err">　　　　</span><span class="nx">alert</span><span class="p">(</span> <span class="s2">"Data Saved: "</span> <span class="o">+</span> <span class="nx">msg</span> <span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>We can define a request function to simulate ajax</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">request</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">opts</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+<span class="err">　　　　</span><span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="err">　　　　</span><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">'function'</span><span class="p">)</span> <span class="p">{</span>
+<span class="err">　　　　　　</span><span class="nx">callback</span> <span class="o">=</span> <span class="nx">opts</span><span class="p">;</span>
+<span class="err">　　　　　　</span><span class="nx">opts</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="err">　　　　</span><span class="p">}</span>
+<span class="err">　　　　</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+<span class="err">　　　　</span><span class="kd">var</span> <span class="nx">fd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">();</span>
+<span class="err">　　　　</span><span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">'POST'</span> <span class="o">&amp;&amp;</span> <span class="nx">opts</span><span class="p">)</span> <span class="p">{</span>
+<span class="err">　　　　　　</span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">opts</span><span class="p">)</span> <span class="p">{</span>
+<span class="err">　　　　　　　　</span><span class="nx">fd</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">opts</span><span class="p">[</span><span class="nx">key</span><span class="p">]));</span>
+<span class="err">　　　　　　</span><span class="p">}</span>
+<span class="err">　　　　</span><span class="p">}</span>
+<span class="err">　　　　</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="err">　　　　　　</span><span class="nx">callback</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">));</span>
+<span class="err">　　　　</span><span class="p">};</span>
+<span class="err">　　　　</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">opts</span> <span class="p">?</span> <span class="nx">fd</span> <span class="p">:</span> <span class="kc">null</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Then we can simulate get and post method based on request method</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">get</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">'GET'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">post</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">);</span></code></pre></figure>
+
+<p>Kaynak: <a href="http://pixelstech.net/article/1368463977_How_to_be_jQuery-free_">http://pixelstech.net/article/1368463977_How_to_be_jQuery-free_</a></p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/11/30/unit-test-inheritance/" itemprop="url">Unit Test Inheritance</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-11-30T00:18:00+02:00"  itemprop="datePublished">November 30, 2012</time></span>
+	<span class="tags">Unit Testing</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/11/30/unit-test-inheritance/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-11-30-unit-test-inheritance.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Günümüzde yazılım geliştirmenin temel unsurlarından biri haline gelen testler, yazılan kodun kalitesini ölçmede önemli rol oynamaktadır. Çok sayıda test yöntemi vardır. Bu test yöntemlerinin yazılım geliştiricileri ilgilendiren tarafı Unit Test’lerdir. Öncelikle şunu belirtmekte fayda var. Unit test kodunu testçi değil, yazılım geliştrici yazar. Çünkü projelerde kullanılan fonksiyonaliteyi bilmek, o kodu anlamak ve kullanmak yazılım geliştiricinin görevidir.</p>
+
+<p>Bu yazıda Unit testler ile ilgili okunaklı ve bakımı kolay kod nasıl yazılır, onu inceleyeceğiz. Yazılan testlerin gitgide kod tekrarına sebep olması, bakımının zorlaşmasını istemiyorsak Unit Test’lere de normal kod yazarken gösterdiğimiz özeni göstermeliyiz. Bir yazılımı geliştirirken nasıl Nesne Yönelimli Programlama’ya uymaya çalışıyorsak aynı şekilde Unit Test’leri de bu şekilde tasarlamamız gerekmektedir.</p>
+
+<p>C# kullanarak yazdığımız kısa bir örnekle yazımızı tamamlayalım:</p>
+
+<p>Örnek projenin, birden fazla database bağlantısını destekleyen bir proje olduğunu düşünelim.</p>
+
+<p>Connection string’lerin doğruluğunu test edelim. Örnekte, Solution’da 2 adet proje yer alıyor. Birisi, projemiz olan class library, diğeri ise Unit Test’leri çalıştıracağımız test projesi.</p>
+
+<p>Uygulamanın class library’sinde bulunan class’lar:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">Database</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">abstract</span> <span class="kt">string</span> <span class="nf">GetConnectionString</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SqlServer</span> <span class="p">:</span> <span class="n">Database</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">GetConnectionString</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="s">@"Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=SSPI;User ID=myDomain\myUsername;Password=myPassword;"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">PostgreSql</span> <span class="p">:</span> <span class="n">Database</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">GetConnectionString</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="s">@"Server=127.0.0.1;Port=5432;Database=myDataBase;User Id=myUsername;Password=myPassword;CommandTimeout=20;"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Oracle</span> <span class="p">:</span> <span class="n">Database</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">GetConnectionString</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="s">@"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>Bu class’ları normal projemizin class’ları olarak düşünebiliriz.</p>
+
+<p>Test projesinde Test edilecek class’ların başına [TestClass], metotların başına [TestMethod] ve her testten önce çalışmasını istediğimiz metodun başına [TestInitialize] yazılması gerekir. <br />
+Uyuglamanın ileride büyüyüp 3 database’den fazlasını destekleyebileceği durumunu düşünürsek, bu durumda testleri türeteceğimiz bir base class(DatabaseTestBase) olmalı.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseTestBase</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="n">Database</span> <span class="n">_database</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="kt">string</span> <span class="n">_expectedConnectionString</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+
+    <span class="p">[</span><span class="n">TestMethod</span><span class="p">]</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">GetConnectionStringAssertValue</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">string</span> <span class="n">expectedValue</span> <span class="p">=</span> <span class="n">_expectedConnectionString</span><span class="p">;</span>
+        <span class="kt">string</span> <span class="n">currentValue</span> <span class="p">=</span> <span class="n">_database</span><span class="p">.</span><span class="nf">GetConnectionString</span><span class="p">();</span>
+
+        <span class="n">Assert</span><span class="p">.</span><span class="nf">AreEqual</span><span class="p">(</span><span class="n">expectedValue</span><span class="p">,</span> <span class="n">currentValue</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Bu class database’den bağımsız bir şekilde connection string’i test edebilmektedir. Ancak bu class’ı kullanabilmek için türetmemiz gerekir. Bu yüzden SqlServer’a ve Oracle’a  beklentimiz olan connection string değerini set ediyoruz ve ardından yeni bir örneğini türetiyoruz. Yeni bir database geldiğinde yine aynı şekilde beklediğimiz connection string değerini set etmek ve yeni bir örneğini türetmek copy-paste, quick replace hızımıza kalmış. :)</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="na">[TestClass]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SqlServerDatabaseTest</span><span class="p">:</span> <span class="n">DatabaseTestBase</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">TestInitialize</span><span class="p">]</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Setup</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">_expectedConnectionString</span> <span class="p">=</span> <span class="s">@"Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=SSPI;User ID=myDomain\myUsername;Password=myPassword;"</span><span class="p">;</span>
+        <span class="n">_database</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SqlServer</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="na">[TestClass]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">OracleDatabaseTest</span><span class="p">:</span> <span class="n">DatabaseTestBase</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">TestInitialize</span><span class="p">]</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Setup</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">_expectedConnectionString</span> <span class="p">=</span> <span class="s">@"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;"</span><span class="p">;</span>
+        <span class="n">_database</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Oracle</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Bir dahaki yazıda görüşmek üzere. Hoşçakalın.</p>
+
+<p>Kaynak: http://www.coderecycling.net/</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/10/20/postgresql-notlari-ve-9-2-yenilikleri/" itemprop="url">PostgreSql Notları ve 9.2 Yenilikleri</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-10-20T22:36:00+03:00"  itemprop="datePublished">October 20, 2012</time></span>
+	<span class="tags">PostgreSql, SQL</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/10/20/postgresql-notlari-ve-9-2-yenilikleri/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-10-20-postgresql-notlari-ve-9-2-yenilikleri.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>20.10.2012 tarihinde yapılan Özgür Web Günleri etkinliği kapsamındaki PostgreSql semineri eğlenceli geçti, bunun yanında not alma fırsatım da oldu. Yararlı olması dileğiyle…</p>
+
+<p><strong><em>PostgreSQL 9.2 ile gelen, yeni özellikler</em></strong></p>
+
+<ul>
+  <li>8.3‘ten sonraki ilk başarım sürümü.</li>
+  <li><strong>Önceki sürümler: 8CPU</strong> kullanıyor iken,** 9.2 sürümü: 64-80 CPU** kullanabilmektedir.</li>
+  <li><strong>512k tps(transaction per second) okuma hızı</strong>, <strong>60k tps yazma hızı.</strong></li>
+  <li>Daha fazla bellek kullanabilme. (Önceden 8gb kullanılabiliyordu.) Bu sayede, özellikle <strong>shared buffers</strong>’ı daha geniş tutabilme.(CPU’ya da bağlı.)</li>
+  <li><strong>Fast path locking:</strong> Select, SelectForUpdate, Index vb. gibi sorgular içeren, okuma ağırlıklı işlemler varsa, veritabanı kısa yoldan lock almak isteyecek. Bu da performansın artmasını sağlar.</li>
+  <li><strong>pg_stat_statements:</strong> En çok sorgulanan kayıtları cache’ler. Optimizasyon için idealdir.</li>
+  <li>Toplu copy işleminde başarım artışı var.</li>
+  <li>Daha az <strong>WAL(Write-ahead logging)</strong> kaydı, daha az <strong>lock</strong> gereksinimi, daha az <strong>I/O</strong> = <strong>yüksek performans.</strong></li>
+  <li><strong>Index only scans:</strong> Veri, çok az değişiyorsa, veritabanından değil, index’ten getirir.</li>
+  <li>Bir replikasyon sunucusu, başka bir replikasyonun <strong>master sunucusu</strong> olarak gösterilebilir.</li>
+  <li><strong>Bgwriter, checkpointer</strong> ve <strong>walwriter</strong> artık sadece ihtiyaç duydukları zaman çalışacaklar.</li>
+  <li><strong>JSON</strong> veri tipi kullanılabiliyor. Şu anda çok özelliği yok, geliştiriliyor. JSON kullanmak için herhangi bir eklentiye ihtiyaç yok.</li>
+  <li><strong>Pg_stat_activity:</strong> Transaction içinde son çalıştırılan script görüntülenebilir.</li>
+  <li><strong>Range veri tipi:</strong> Bir kolona başlangıç ve bitiş zamanı yazılabilir, indexlenebilir, partitioning yapılabilir.</li>
+  <li><strong>Synchronous_commit write:</strong> Önceki sürümlere göre daha hızlı sıralama</li>
+  <li><strong>SP_GIST(Space-Partitioned GiST):</strong> Coğrafi bilgi sistemleri ile ilgili verilerde kullanılabilecek indexleme altyapısı. (<em>http://www.pgcon.org/2011/schedule/events/309.en.html</em>)<br />
+<strong>Kaynak: </strong>Devrim Gündüz(<a href="http://gunduz.org">gunduz.org</a>)<br />
+Özgür Web Günleri(<a href="http://www.ozgurwebgunleri.org.tr/2012/">www.ozgurwebgunleri.org.tr/2012/</a>)</li>
+</ul>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/09/27/solid-prensipleri/" itemprop="url">SOLID Prensipleri</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-09-27T22:28:00+03:00"  itemprop="datePublished">September 27, 2012</time></span>
+	<span class="tags">Object Oriented Programming</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/09/27/solid-prensipleri/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-09-27-solid-prensipleri.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Bu yazıda SOLID prensiplerinden bahsedeceğiz. SOLID prensipleri nelerdir? Gerçekten nesne yönelimli programlama nasıl olmalı? Kısıt nedir? Amacımız nesne yönelimli programlama yapmaksa, ismini prensiplerin baş harflerinden alan SOLID’e uymamız gerekir. Bu prensipleri temel aldığımız zaman nesne yönelimli programlama yapıyoruz diyebiliriz.</p>
+
+<ol>
+  <li>Single Responsibility Principle</li>
+  <li>Open Closed Principle</li>
+  <li>Liskov‘s Substitution Principle</li>
+  <li>Interface Segregation Principle</li>
+  <li>Dependency Inversion Principle</li>
+</ol>
+
+<h2 id="single-responsibility-principle">1.Single Responsibility Principle:</h2>
+<p>Her modülün(sınıf,nesne,metot) tek bir görevi, tek bir sorumluluğu olmalıdır. Bir nesneyi değiştirmek için tek bir neden olmalıdır. Birden fazla neden varsa, o nesnenin birden fazla sorumluluğu var demektir. Burada istenen birden fazla görev/sorumluluk olmamasıdır.</p>
+
+<h2 id="openclosed-principle">2.Open/Closed Principle:</h2>
+<p>Yazdığımız kod(sınıf,nesne,metot) gelişime açık, değişime kapalı olmalıdır. Yeni bir özellik ekleneceği zaman veya geliştirme yapılacağı zaman kodu değiştirmemek, sadece önceden yazılan kodun üstüne bir şeyler eklemek gerekir.</p>
+
+<h2 id="liskovs-substitution-principle">3.Liskov’s Substitution Principle:</h2>
+<p>Alt sınıflarıdan oluşturulan nesneler, üst sınıfların nesneleriyle yer değiştirildiklerinde aynı davranışı göstermek zorundadır. Örnekle gösterecek olursak:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">Rectangle</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Width</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Height</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetArea</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">Width</span> <span class="p">*</span> <span class="n">Height</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Square</span> <span class="p">:</span> <span class="n">Rectangle</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Width</span>
+        <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">width</span><span class="p">;</span> <span class="p">}</span>
+            <span class="k">set</span>
+            <span class="p">{</span>
+                <span class="n">width</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+                <span class="n">height</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    
+        <span class="k">private</span> <span class="kt">int</span> <span class="n">height</span><span class="p">;</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Height</span>
+        <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">height</span><span class="p">;</span> <span class="p">}</span>
+            <span class="k">set</span>
+            <span class="p">{</span>
+                <span class="n">height</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+                <span class="n">width</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">Factory</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="nf">GetRectangle</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">Square</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Rectangle</span> <span class="n">rect</span> <span class="p">=</span> <span class="n">Factory</span><span class="p">.</span><span class="nf">GetRectangle</span><span class="p">();</span>
+            <span class="n">rect</span><span class="p">.</span><span class="n">Width</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+            <span class="n">rect</span><span class="p">.</span><span class="n">Height</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">rect</span><span class="p">.</span><span class="nf">GetArea</span><span class="p">());</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></figure>
+
+<h2 id="interface-segregation-principle">4.Interface Segregation Principle:</h2>
+<p>Benzer özellikleri barındıran sınıfları tek bir interface’ten türeterek o interface’e sonradan sınıflarda kesin olarak kullanılmayacak özellikler eklemek doğru değildir. Başta çözüm benzer özelliğe sahip sınıfları tek bir interface’ten türetmek gibi görünse de aslında çok da doğru değildir. Çözüm interface’leri oluştururken içindeki üyeleri ortak olacak şekilde parçalayıp bu üyeleri interface’ler altında toplayıp, ayrı interface’ler oluşturmaktır.</p>
+
+<h2 id="dependency-inversion-principle">5.Dependency Inversion Principle:</h2>
+<p>Somut sınıflara olan bağımlılıklar, soyut sınıflar ve interface’ler kullanılarak ortadan kaldırılmalıdır. Çünkü somut sınıflarda değişiklikler çok olur.</p>
+
+<p>Bu prensipleri ne kadar iyi uygularsak nesne yönelimli programlamayı o kadar iyi yapmış oluruz, ancak amaç nesne yönelimli programlama yapmak için bu kuralları uygulamak değil, bu prensiplere bakarak yazılan koddaki eksikleri bulmak ve düzeltmektir.</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/09/25/putty-yardimiyla-redhat-cloud-servera-ssh-baglantisi-yapmak/" itemprop="url">Putty Yardımıyla RedHat Cloud Server’a SSH Bağlantısı Yapmak</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-09-25T21:31:00+03:00"  itemprop="datePublished">September 25, 2012</time></span>
+	<span class="tags">Genel</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/09/25/putty-yardimiyla-redhat-cloud-servera-ssh-baglantisi-yapmak/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-09-25-putty-yardimiyla-redhat-cloud-servera-ssh-baglantisi-yapmak.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p><strong>1.Putty.exe</strong> çalıştırılır.<br />
+<img src="/images/jekyll/1-connection1.png" alt="" title="1.connection" /></p>
+
+<p><strong>2.Session</strong> bölümünde:<br />
+<img src="/images/jekyll/2-data.png" alt="" title="2.data" /></p>
+
+<p><strong>Host Name (or IP address):</strong> 115.xx.xxx.xx<br />
+<strong>Port:</strong> (Default 22)<br />
+<strong>Connection type:</strong> (Default SSH)</p>
+
+<p><strong>3.Connection</strong> bölümünde:<br />
+<strong>i.Data</strong> sekmesinde <strong>Auto-login username:</strong> idcuser verilir.<br />
+<img src="/images/jekyll/3-auth.png" alt="" title="3.auth" /></p>
+
+<p><strong>ii.SSH-&gt;Auth</strong>’a gelerek bağlantı için gerekli olan “<strong>private.ppk”</strong> dosyası eklenir. <strong>Not:</strong> “private.ppk” dosyasını elde etmek için: “<strong>puttygen.exe</strong>” çalıştırılır.</p>
+
+<p>Load butonuna tıklayarak cloud server oluştururken aldığımız dosya, public key ve private key olarak kaydedilir.<br />
+<img src="/images/jekyll/4-puttygen.png" alt="" title="4.puttygen" /></p>
+
+<p>4.Yapmış olduğumuz ayarları kaybetmemek için: Session bölümüne tekrar gelerek <strong>Saved Sessions</strong>’a herhangi bir isim verilir ve <strong>Save</strong> butouna basılarak ayarlar kaydedilmiş olur. Ardından Open denerek bağlantı sağlanır.</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/08/31/module-pattern/" itemprop="url">Module Pattern</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-08-31T06:19:00+03:00"  itemprop="datePublished">August 31, 2012</time></span>
+	<span class="tags">Creational Design Patterns</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/08/31/module-pattern/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-08-31-module-pattern.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p><strong>Object Literal Notasyonu</strong><br />
+Modüller, büyük bir uygulamada yer alan parçalardır. JavaScript’te nesne tanımlamanın bir kaç yolu vardır.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">newObject</span> <span class="o">=</span> <span class="p">{};</span> <span class="c1">//or</span>
+    <span class="kd">var</span> <span class="nx">newObject</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span> <span class="c1">//or</span>
+    <span class="kd">var</span> <span class="nx">newObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span> <span class="c1">//or</span></code></pre></figure>
+
+<p>Bu tanımlardan biri de örneğin ilk sıradaki tanım olan object literal notasyonudur. Nesne tanımı içinde kalan isimler aralarına virgül konularak birbirinden ayrılır ve son elemandan sonra virgül konulmaz. Object literal’le nesne tanımlamak için new anahtar kelimesini kullanmaya gerek yoktur.</p>
+
+<p>Object Literal tanımı aşağıdaki gibidir:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myObjectLiteral</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">variableKey</span><span class="p">:</span> <span class="nx">variableValue</span><span class="p">,</span>
+    <span class="na">functionKey</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+       <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>Aşağıda object litaral örneğine yer verilmiştir.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myModule</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">myProperty</span><span class="p">:</span> <span class="s1">'someValue'</span><span class="p">,</span>
+    <span class="c1">// object literals can contain properties and methods.</span>
+    <span class="c1">// here, another object is defined for configuration</span>
+    <span class="c1">// purposes:</span>
+    <span class="na">myConfig</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">useCaching</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="na">language</span><span class="p">:</span> <span class="s1">'en'</span>
+    <span class="p">},</span>
+    <span class="c1">// a very basic method</span>
+    <span class="na">myMethod</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'I can haz functionality?'</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="c1">// output a value based on current configuration</span>
+    <span class="na">myMethod2</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Caching is:'</span> <span class="o">+</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">myConfig</span><span class="p">.</span><span class="nx">useCaching</span><span class="p">)</span> <span class="p">?</span> <span class="s1">'enabled'</span> <span class="p">:</span> <span class="s1">'disabled'</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="c1">// override the current configuration</span>
+    <span class="na">myMethod3</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">newConfig</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">newConfig</span> <span class="o">==</span> <span class="s1">'object'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">myConfig</span> <span class="o">=</span> <span class="nx">newConfig</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">myConfig</span><span class="p">.</span><span class="nx">language</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">myModule</span><span class="p">.</span><span class="nx">myMethod</span><span class="p">();</span> <span class="c1">// I can haz functionality</span>
+<span class="nx">myModule</span><span class="p">.</span><span class="nx">myMethod2</span><span class="p">();</span> <span class="c1">// outputs enabled</span>
+<span class="nx">myModule</span><span class="p">.</span><span class="nx">myMethod3</span><span class="p">({</span>
+<span class="na">language</span><span class="p">:</span> <span class="s1">'fr'</span><span class="p">,</span>
+<span class="na">useCaching</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Buraya kadar olanlar Module Pattern’i daha iyi anlamak için gerekli bilgilerdir.</p>
+
+<p><strong>Module Pattern</strong><br />
+Module pattern gizlilik içerir. Karışık public/private metot ve değişkenlerin paketlenmesini sağlar. Global scope’taki kodların, bir başka geliştirici tarafından yazılan kodlarla çarpışmasını engeller.</p>
+
+<p><strong>Module pattern uygulanışı – Örnek1:</strong></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">testModule</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">incrementCounter</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="k">return</span> <span class="nx">counter</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="na">resetCounter</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">‘</span><span class="nx">counter</span> <span class="nx">value</span> <span class="nx">prior</span> <span class="nx">to</span> <span class="na">reset</span><span class="p">:</span><span class="err">’</span> <span class="o">+</span> <span class="nx">counter</span><span class="p">);</span>
+            <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+<span class="p">})();</span>
+
+<span class="nx">testModule</span><span class="p">.</span><span class="nx">incrementCounter</span><span class="p">();</span>
+<span class="nx">testModule</span><span class="p">.</span><span class="nx">resetCounter</span><span class="p">();</span></code></pre></figure>
+
+<p>Yukarıdaki örnekte incrementCounter() metodu ile counter değişkenin değeri 1 artarak 1 oldu. Ardından resetCounter() metodu çağrıldığında önce counter değeri yazıldı. Burada önceden değeri artırılan counter, değerini içeride(return bloğunda) korudu.</p>
+
+<p><strong>Module pattern uygulanışı – Örnek2:</strong></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">someModule</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//private attributes</span>
+    <span class="kd">var</span> <span class="nx">privateVar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">//private methods</span>
+    <span class="kd">var</span> <span class="nx">privateMethod</span><span class="err">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s2">"Private Test"</span><span class="p">;</span>
+    <span class="p">};</span>
+	
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="c1">//public attributes</span>
+        <span class="na">publicVar</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="c1">//public methods</span>
+        <span class="na">publicMethod</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s2">"Followed By Public Test"</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="na">getData</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">privateMethod</span><span class="p">()</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">publicMethod</span><span class="p">()</span> <span class="o">+</span> <span class="nx">privateVar</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})();</span>
+
+<span class="nx">SomeModule</span><span class="p">.</span><span class="nx">getData</span><span class="p">();</span></code></pre></figure>
+
+<p>Yukarıdaki örnekte tek bir string ifadesi ayrı metotlarda modüler bir şekilde yazılmış ve ardından istenen sırada çağrılarak birleştirilmiştir. Module pattern ile yapılmak istenen de yaratılacak olan nesneyi tek bir metotta değil de, farklı amaçlar doğrultusunda da kullanabilmek için basit ve tek bir iş yapan ayrı metotlarda yazmak ve istenen doğrultuda bu modülleri birleştirerek kullanmaktır.</p>
+
+<p><strong>Kaynak:</strong> Learning JavaScript Design Patterns – Addy Osmani</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/08/27/singleton-pattern/" itemprop="url">Singleton Pattern</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-08-27T21:34:00+03:00"  itemprop="datePublished">August 27, 2012</time></span>
+	<span class="tags">Creational Design Patterns</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/08/27/singleton-pattern/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-08-27-singleton-pattern.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Singleton Pattern’de amaç; yaratılması pahalı olan nesnelerin tekrar yaratılmasını engellemek, varsa eldeki nesneyi kullandırmaktır. Nesne yoksa yeni bir nesne oluşturulur, varsa elde olan kullanılır. Tek bir nesne olması, class’tan <strong>new</strong> anahtar sözcüğü ile yeni bir nesne oluşturulmasını engeller. Tek bir nesne üzerinde çalışmayı gerektirecek durumlarda <strong>Singleton Pattern</strong> kullanmak avantajlı olacaktır. JavaScript ile singleton pattern kullanımının yaklaşık 10 çeşit örneği bulunmaktadır. En kullanışlı kullanımlardan biri aşağıdaki gibidir:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Singleton</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">instantiated</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// singleton here</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="na">publicMethod</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">);</span>
+            <span class="p">},</span>
+            <span class="na">publicProperty</span><span class="p">:</span> <span class="s1">'test'</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+	
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">getInstance</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">instantiated</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">instantiated</span> <span class="o">=</span> <span class="nx">init</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="nx">instantiated</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+<span class="p">})();</span></code></pre></figure>
+
+<p>public metod böyle çağrılabilir.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Singleton</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">().</span><span class="nx">publicMethod</span><span class="p">();</span></code></pre></figure>
+
+<p>ekran çıktısı: hello world</p>
+
+<p>JavaScript ile Singleton pattern kullanımında sınıf syntax’ı aşağıdaki gibi olmalıdır.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Singleton</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
+   <span class="cm">/*kodlar buraya yazılacak.*/</span>
+<span class="p">})();</span></code></pre></figure>
+
+<p>JavaScript’te private sınıf üyeleri(property ve metotlar) tanımlamak için <strong>return</strong> anahtar kelimesi kullanılır. return olmadan bir class içindeki tüm sınıf üyeleri public’tir. return yazıldığı anda return dışında kalan kısımlar dışarıdan erişime kapalı hale gelir, yani private olur. return içinde kalanlar ise public’tir.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">return</span><span class="p">{</span>
+   <span class="cm">/*public metot ve property'ler buraya yazılacak.*/</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>Yeni bir nesne yaratmayı engellemek için constructor private yapılır. Private yapmak için yapılması gereken ilk iş return yazmak ve private olacak olan sınıf üyesini return’ün dışına yazmaktır. Burada constructor’ı return bloğunun dışına yazmalıyız.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Singleton</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
+   <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span><span class="p">{</span> <span class="cm">/* constructor */</span><span class="p">};}</span>
+   <span class="k">return</span><span class="p">{};</span>
+<span class="p">})();</span></code></pre></figure>
+
+<p>Nesneyi çağırmak için:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Singleton</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">().</span><span class="nx">publicMethod</span><span class="p">();</span></code></pre></figure>
+
+<p>dediğimizde, yoksa yeni bir nesne oluşacak, varsa olan nesneyi gelecektir. Bu şekilde, yaratılması pahalı olan nesnelerin tekrar tekrar yaratılması engellenmiş, maliyet azalmış olur.</p>
+
+<p><strong>Not:</strong> Singleton nesne çağırmak için kullanılan fonksiyon, static fonksiyon çağırmayla aynıdır. <strong>ClassName.getInstance()</strong> şeklinde nesneye ulaşılabilir.</p>
+
+<p><strong>Kaynak:</strong> Learning JavaScript Design Patterns - Addy Osmani</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/08/23/constructor-pattern/" itemprop="url">Constructor Pattern</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-08-23T23:15:00+03:00"  itemprop="datePublished">August 23, 2012</time></span>
+	<span class="tags">Creational Design Patterns</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/08/23/constructor-pattern/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-08-23-constructor-pattern.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Merhabalar, yeni bir aktif blog dönemine girmiş bulunmaktayım. Bu yazıda Tasarım Desenleri’ne kısa bir giriş olması amacıyla Creational(Yaratımsal) Pattern’lerden biri olan Constructor Pattern’den bahsedeceğiz.</p>
+
+<p><strong>Basit bir constructor örneği:</strong></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span><span class="nx">model</span><span class="p">,</span> <span class="nx">year</span><span class="p">,</span> <span class="nx">miles</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="nx">model</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">miles</span> <span class="o">=</span> <span class="nx">miles</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">+</span> <span class="s2">" has done "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">miles</span> <span class="o">+</span> <span class="s2">" miles"</span><span class="p">;</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">civic</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s2">"Honda Civic"</span><span class="p">,</span> <span class="mi">2009</span><span class="p">,</span> <span class="mi">20000</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">mondeo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s2">"Ford Mondeo"</span><span class="p">,</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">5000</span><span class="p">);</span>
+    
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">civic</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mondeo</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span></code></pre></figure>
+
+<p><strong>Prototype kullanılarak yapılan bir constructor örneği:</strong></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span><span class="nx">model</span><span class="p">,</span> <span class="nx">year</span><span class="p">,</span> <span class="nx">miles</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="nx">model</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">miles</span> <span class="o">=</span> <span class="nx">miles</span><span class="p">;</span>
+<span class="p">}</span>
+    
+<span class="nx">Car</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">+</span> <span class="s2">" has done "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">miles</span> <span class="o">+</span> <span class="s2">" miles"</span><span class="p">;</span>
+<span class="p">};</span>
+    
+<span class="kd">var</span> <span class="nx">civic</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s2">"Honda Civic"</span><span class="p">,</span> <span class="mi">2009</span><span class="p">,</span> <span class="mi">20000</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">mondeo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s2">"Ford Mondeo"</span><span class="p">,</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">5000</span><span class="p">);</span>
+    
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">civic</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span></code></pre></figure>
+
+<p>Burada ister normal yöntemde olduğu gibi <strong>this</strong> diyerek, istersek de <strong>Car.prototype</strong> diyerek Car nesnesini çağırabiliriz. <strong>this.toString</strong> metodu Car nesnesinin içerisinden çıkarılmış, ancak <strong>Car.prototype.toString</strong> ile tanımlandığında yine Car’a ait bir metot olarak çağrılabilmiştir. Prototype, adından da anlaşılacağı gibi, büyük bir nesnenin küçük bir parçası olarak düşünülebilir.</p>
+
+<p><strong>Kaynak:</strong> Learning JavaScript Design Patterns - Addy Osmani</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/04/08/9-22-nisan-internet-haftasi/" itemprop="url">8-22 Nisan İnternet Haftası</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-04-08T09:31:00+03:00"  itemprop="datePublished">April  8, 2012</time></span>
+	<span class="tags">Seminer &amp; Etkinlik</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/04/08/9-22-nisan-internet-haftasi/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-04-08-9-22-nisan-internet-haftasi.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p><img src="/images/jekyll/ih_logo.png" alt="8-22 Nisan 2012 İnternet Haftası" title="İnternet Haftası" /></p>
+
+<p>Bildiğiniz gibi <strong>12 Nisan 1993</strong> İnternetin Türkiye’de genel kullanıma açıldığı gün. 1998’den beri 12 Nisanı kapsayan 2 haftayı <strong>İnternet Haftası</strong> olarak kutluyoruz. Bu esas olarak İnternet Kültürünü yayma, ülkemiz gündemine İnternet, E-devlet, E-Türkiye, Bilgi Toplumu konularını yerleştirmek, dünya nereye gidiyor, Türkiye’de durum nedir ve Ne yapılmalı konularının tartışılmasını sağlamaya, teşvik etmeye yönelik bir çaba. Bir anlamda <strong>“Bilişim ve İnternet Fırtınası”</strong> estirme çabası.</p>
+
+<p>Başta Üniversiteler, Bilişim/Bilgi Sivil toplum kuruluşları, Ticaret ve Sanayi odalar, Valilikler (MEB, Emniyet), Türk Telekom, İnternet Şirketleri, Barolar’ın başını çektiği etkinlikler yapılmıştır. Etkinlik yapılan il sayısı <strong>50</strong>‘lere yaklaşmıştır zaman zaman.</p>
+
+<p>Ben de bana gelen bilgilere göre sizlere, bu yıl neler yapıldığı hakkında bilgi vermeye çalışacağım.</p>
+
+<h2 id="bu-yl-u-neriler-yaplmtr">Bu yıl şu öneriler yapılmıştır:</h2>
+<p>– Bir Mobil Uygulama Başlat<br />
+– Kültürel Mirası İnternet Taşı<br />
+– Bir e-devlet hizmeti başlat<br />
+– Açık Erişim ve Açık Ders malzemesine destek ol<br />
+– Halk Kütüphanelerini e-kitap hizmeti başlatsın<br />
+– Okullar internetle bütünleşsin<br />
+– Belediyeler ucuz internet sağlasın ve katılım/saydamlık için interneti kullansın</p>
+
+<h2 id="internethaftasiorgtr-webinde-halkmzn-gr-ve-nerilerini-almak-iin-forumlar-almtr">internethaftasi.org.tr webinde halkımızın görüş ve önerilerini almak için forumlar açılmıştır:</h2>
+<p>– Internet Eğitimimizi Nasıl Etkiliyor?<br />
+– Sosyal Ağlar<br />
+– İnternet Yasaklari ve Sansür<br />
+– E-devlet Hizmetleri<br />
+– Internet ve Demokrasi</p>
+
+<p>Doğum günü pastası <strong>12 Nisan’da İzmir’de Yaşar Üniversitesi</strong> ev sahipliğinde yapılacaktır. Program şekillenmektedir.</p>
+
+<p>Bu yıl <strong>20-30</strong> ilde etkinlik bekliyoruz. Şu anda etkinlik olacağı kesinleşen iller:<br />
+<strong>Ankara, İstanbul, İzmir, Manisa, Uşak, Osmaniye, Yozgat, Nevşehir, Amasya, Bartın, Ordu, Rize</strong></p>
+
+<p>Tüm gönüllülerden, İnternetin önemini kavramış her kurum, kuruluş, ve bireylerden katkı bekliyoruz. Bu logo/banneri koymaktan, twit, mesage göndermeye, haber, program yapmaya, konferans vermeye, etkinlik örgütlemeye, TBMM de konuşmaya uzanan bir yelpazedir. Daha fazla öneri http://internethaftasi.org.tr/aktif katilim cagrisi.html adresindedir.</p>
+
+<p>http://internethaftasi.org.tr/<br />
+<strong>İnternet Yaşamdır !</strong></p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/04/06/sql-server-ile-veritabani-bilgilerini-ogrenmek/" itemprop="url">Sql Server ile Veritabanı Bilgilerini Öğrenmek</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-04-06T12:45:00+03:00"  itemprop="datePublished">April  6, 2012</time></span>
+	<span class="tags">Sql Server</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/04/06/sql-server-ile-veritabani-bilgilerini-ogrenmek/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-04-06-sql-server-ile-veritabani-bilgilerini-ogrenmek.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Bu yazıda Sql Server veritabanı yönetim sisteminde kaç tane CHECK Constraint, DEFAULT Constraint, UNIQUE Constraint, FOREIGN KEY Constraint, PRIMARY KEY, kaç adet sistem tablosu, kaç adet kullanıcı tablosu bilgileri alabileceğimiz bir sorguyu paylaşıyorum. Umarım işinize yarar.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">xtype</span><span class="p">,</span><span class="k">CASE</span><span class="p">(</span><span class="n">xtype</span><span class="p">)</span>
+	<span class="k">WHEN</span> <span class="s1">'AF'</span> <span class="k">THEN</span> <span class="s1">'Aggregate function (CLR)'</span>
+	<span class="k">WHEN</span> <span class="s1">'C'</span> <span class="k">THEN</span> <span class="s1">'CHECK constraint'</span>
+	<span class="k">WHEN</span> <span class="s1">'D'</span> <span class="k">THEN</span> <span class="s1">'Default or DEFAULT constraint'</span>
+	<span class="k">WHEN</span> <span class="s1">'F'</span> <span class="k">THEN</span> <span class="s1">'FOREIGN KEY constraint'</span>
+	<span class="k">WHEN</span> <span class="s1">'L'</span> <span class="k">THEN</span> <span class="s1">'Log'</span>
+	<span class="k">WHEN</span> <span class="s1">'FN'</span> <span class="k">THEN</span> <span class="s1">'Scalar function'</span>
+	<span class="k">WHEN</span> <span class="s1">'FS'</span> <span class="k">THEN</span> <span class="s1">'Assembly (CLR) scalar-function'</span>
+	<span class="k">WHEN</span> <span class="s1">'FT'</span> <span class="k">THEN</span> <span class="s1">'Assembly (CLR) table-valued function'</span>
+	<span class="k">WHEN</span> <span class="s1">'IF'</span> <span class="k">THEN</span> <span class="s1">'Inlined table-function'</span>
+	<span class="k">WHEN</span> <span class="s1">'IT'</span> <span class="k">THEN</span> <span class="s1">'Internal table'</span>
+	<span class="k">WHEN</span> <span class="s1">'P'</span> <span class="k">THEN</span> <span class="s1">'Stored procedure'</span>
+	<span class="k">WHEN</span> <span class="s1">'PC'</span> <span class="k">THEN</span> <span class="s1">'Assembly (CLR) stored-procedure'</span>
+	<span class="k">WHEN</span> <span class="s1">'PK'</span> <span class="k">THEN</span> <span class="s1">'PRIMARY KEY constraint (type is K)'</span>
+	<span class="k">WHEN</span> <span class="s1">'RF'</span> <span class="k">THEN</span> <span class="s1">'Replication filter stored procedure '</span>
+	<span class="k">WHEN</span> <span class="s1">'S'</span> <span class="k">THEN</span> <span class="s1">'System table'</span>
+	<span class="k">WHEN</span> <span class="s1">'SN'</span> <span class="k">THEN</span> <span class="s1">'Synonym'</span>
+	<span class="k">WHEN</span> <span class="s1">'SQ'</span> <span class="k">THEN</span> <span class="s1">'Service queue'</span>
+	<span class="k">WHEN</span> <span class="s1">'TA'</span> <span class="k">THEN</span> <span class="s1">'Assembly (CLR) DML trigger'</span>
+	<span class="k">WHEN</span> <span class="s1">'TF'</span> <span class="k">THEN</span> <span class="s1">'Table function'</span>
+	<span class="k">WHEN</span> <span class="s1">'TR'</span> <span class="k">THEN</span> <span class="s1">'Trigger'</span>
+	<span class="k">WHEN</span> <span class="s1">'TT'</span> <span class="k">THEN</span> <span class="s1">'Table type'</span>
+	<span class="k">WHEN</span> <span class="s1">'U'</span> <span class="k">THEN</span> <span class="s1">'User table'</span>
+	<span class="k">WHEN</span> <span class="s1">'UQ'</span> <span class="k">THEN</span> <span class="s1">'UNIQUE constraint (type is K)'</span>
+	<span class="k">WHEN</span> <span class="s1">'V'</span> <span class="k">THEN</span> <span class="s1">'View'</span>
+	<span class="k">WHEN</span> <span class="s1">'X'</span> <span class="k">THEN</span> <span class="s1">'Extended stored procedure'</span>
+	<span class="k">END</span> <span class="n">A</span><span class="err">çı</span><span class="n">klama</span><span class="p">,</span>
+<span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">Toplam</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">sysobjects</span> <span class="k">with</span><span class="p">(</span><span class="n">NOLOCK</span><span class="p">)</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">xtype</span>
+</code></pre>
+</div>
+
+<p>İyi çalışmalar.</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/03/24/visual-studio-2010-keyboard-shortcuts/" itemprop="url">Visual Studio 2010 Keyboard Shortcuts</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-03-24T21:49:00+02:00"  itemprop="datePublished">March 24, 2012</time></span>
+	<span class="tags">.NET Framework, C#</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/03/24/visual-studio-2010-keyboard-shortcuts/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-03-24-visual-studio-2010-keyboard-shortcuts.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Merhabalar, bu yazıda Visual Studio programı kullanıcılarına kolaylıklar sunan kısayolları paylaşıyor olacağım. Visual Studio kullanıcıları bilirler ki Visual Studio üzerinde kod geliştirmek otobanda araba sürmek gibidir. Bu kısayolları görmeden önce benim de bildiğim ve kullandığım kısayollar vardı. Bu dökümanda tüm kısayolları görmüş olduk. Hız ve performans açısından katkısı olacağı için bilinmesinde fayda var diye düşünüyorum.</p>
+
+<p><a href="/images/jekyll/vs-kb-brochure-csharp-a4_001.png"><img src="/images/jekyll/vs-kb-brochure-csharp-a4_001.png" alt="" title="VS-KB-Brochure-CSharp-A4_001" /></a></p>
+
+<p><a href="/images/jekyll/vs-kb-brochure-csharp-a4_002.png"><img src="/images/jekyll/vs-kb-brochure-csharp-a4_002.png" alt="" title="VS-KB-Brochure-CSharp-A4_002" /></a></p>
+
+<p>Ayrıca kısayolların bulunduğu pdf dosyasını <a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=13189">buradan</a> indirebilirsiniz.</p>
+
+<p>Bir dahaki yazımızda görüşmek üzere. Hoşçakalın.</p>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+	<h1 class="title" itemprop="name"><a href="/archive/2012/02/21/sql-server-veritabaninda-bulunan-tum-stored-procedureleri-silmek/" itemprop="url">Sql Server Veritabanında Bulunan Tüm Stored Procedure'leri Silmek</a></h1>
+	<div class="meta">
+	<span class="date">
+
+
+
+
+<time datetime="2012-02-21T14:16:00+02:00"  itemprop="datePublished">February 21, 2012</time></span>
+	<span class="tags">Sql Server</span>
+	
+		
+{ post.url }
+<span class="comments"><a href="/archive/2012/02/21/sql-server-veritabaninda-bulunan-tum-stored-procedureleri-silmek/#disqus_thread">comments</a></span>
+	
+	<span class="edit">
+
+<a href="https://github.com/semihkirdinli/semihkirdinli.github.io/edit/master/_posts/2012-02-21-sql-server-veritabaninda-bulunan-tum-stored-procedureleri-silmek.md">edit</a>
+</span>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Sql Server veritabanında bulunan tüm stored procedure’leri silmek için aşağıdaki kodu çalıştırmamız yeterli olacaktır.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">DECLARE</span> <span class="o">@</span><span class="n">procedureName</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="k">DECLARE</span> <span class="n">cur</span> <span class="k">CURSOR</span>
+      <span class="k">FOR</span> <span class="k">SELECT</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">objects</span> <span class="k">WHERE</span> <span class="k">type</span> <span class="o">=</span> <span class="s1">'p'</span>
+      <span class="k">OPEN</span> <span class="n">cur</span>
+
+      <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="k">FROM</span> <span class="n">cur</span> <span class="k">INTO</span> <span class="o">@</span><span class="n">procedureName</span>
+      <span class="n">WHILE</span> <span class="o">@@</span><span class="n">fetch_status</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="k">BEGIN</span>
+            <span class="k">EXEC</span><span class="p">(</span><span class="s1">'DROP PROCEDURE '</span> <span class="o">+</span> <span class="o">@</span><span class="n">procedureName</span><span class="p">)</span>
+            <span class="k">FETCH</span> <span class="k">NEXT</span> <span class="k">FROM</span> <span class="n">cur</span> <span class="k">INTO</span> <span class="o">@</span><span class="n">procedureName</span>
+      <span class="k">END</span>
+      <span class="k">CLOSE</span> <span class="n">cur</span>
+      <span class="k">DEALLOCATE</span> <span class="n">cur</span>
+</code></pre>
+</div>
+
+		
+		
+	</div>
+
+
+    </article>
+
+
 </div>
 <nav id="pagenavi">
-    {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}" class="prev">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next">Next</a>
-    {% endif %}
+    
+    
+        <a href="/page/2" class="next">Next</a>
+    
     <div class="center"><a href="/archive">Blog Archives</a></div>
-</nav>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2016 - Semih Kırdinli Blog content licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>
+  | Unless otherwise stated or granted, code samples licensed under the <a href="http://sm.mit-license.org/">MIT license</a>. 
+  | Site design based on the <a href="https://github.com/shashankmehta/greyshade">Greyshade theme</a> under the <a href="http://sm.mit-license.org/">MIT license</a>
+  | <a href="/privacy">privacy</a>
+  | <a href="/articles/blogtegrity">blogtegrity</a>
+</p>
+
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'skirdinli';
+      
+    (function () {
+    
+      var countScript = document.createElement('script');
+      countScript.type = 'text/javascript';
+      countScript.async = true;
+      countScript.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(countScript);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</footer>
+		</div>
+	</div>
+
+
+<!--  CodeProject AD  -->
+<script>
+    function _dmBootstrap(file) {
+        var _dma = document.createElement('script'); 
+        _dma.type = 'text/javascript';
+        _dma.async = true; 
+        _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);
+    }
+    function _dmFollowup(file) { if (typeof DMAds === 'undefined')  _dmBootstrap('cdn2.DeveloperMedia.com/a.min.js');}
+    (function () { _dmBootstrap('cdn1.DeveloperMedia.com/a.min.js'); setTimeout(_dmFollowup, 2000);})();
+</script>
+</body>
+</html>
