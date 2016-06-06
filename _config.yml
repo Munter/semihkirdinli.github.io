@@ -3,7 +3,7 @@
 #
 author: Semih Kırdinli
 description: Semih Kırdinli © ...ve düşünceleri
-url: http://semihkirdinli.github.io
+url: http://semihkirdinli.com/
 title: Semih Kırdinli ⓒⓔ 
 subtitle: ...ve düşünceleri
 gravatar_url: https://tr.gravatar.com/userimage/4966509/ad4620408efa538c105cd45c70a2a131.jpg?size=200
@@ -18,7 +18,7 @@ twitter_user: skirdinli
 twitter_tweet_button: true
 
 # Disqus Comments
-disqus_short_name: skirdinli
+disqus_short_name: semihkrdinli
 disqus_show_comment_count: true
 
 # Google Analytics
