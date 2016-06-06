@@ -13,7 +13,6 @@ sharing: false
 
 1990 yılında Uşak'ta doğdum. Anadolu Lisesi'nden mezun olduktan sonra, üniversite hayatımı Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde tamamladım. Çalışma hayatına İstanbul'da başladım ve devam ediyorum. 
 
-2009 yılında başladığım blog maceramda, zaman zaman paylaşımlarda bulundum. Şimdilerde ise blog sitemi yeni bir yapıya kavuşturarak paylaşımlarıma devam etmek istiyorum. Kafanızı şişireceğim anlayacağınız. :)
+2009 yılında başladığım blog maceramda, zaman zaman paylaşımlarda bulundum. Şimdilerde ise blog sitemi yeni bir yapıya kavuşturarak paylaşımlarıma devam etmek istiyorum. Kafanızı şişireceğim anlayacağınız.
 
-Hatalarımız, kusurlarımız olabilir. Yaptığım yapacağım hatalar için beni uyarırsanız sevinirim. Kalanlar için de mazur görün. :)
-
+Hatalarımız, kusurlarımız olabilir. Yaptığım yapacağım hatalar için beni uyarırsanız sevinirim. Kalanlar için de mazur görün.
